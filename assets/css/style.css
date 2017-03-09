@@ -7,7 +7,7 @@
 	background-image: url('../images/marvel-background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 720px;
+	height: 770px;
 	margin-top: 0;
 	position: relative;
 	background-attachment: fixed;
@@ -29,6 +29,7 @@
 .search-button {
 	
 }
+
 .header {
 
 	position: relative;
@@ -36,7 +37,7 @@
 }
 .spidey {
 	width: 100%;
-	height: 770px;
+	height: 100%;
 }
 
 .logo {
@@ -98,3 +99,13 @@
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+
+
+
+
+
+
+
+
+
