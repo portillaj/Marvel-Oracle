@@ -7,7 +7,9 @@
 	background-image: url('../images/marvel-background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	height: 770px;
+	min-width: 100%;
 	margin-top: 0;
 	position: relative;
 	background-attachment: fixed;
@@ -42,8 +44,9 @@
 
 .logo {
 	position: absolute;
-	left: 500px;
+	left: 34%;
 	top: 35%;
+
 }
 
 /* Shutter Out Horizontal */

@@ -27,7 +27,7 @@ var ts = new Date().getTime();
     .done(function(data) {
       // sort of a long dump you will need to sort through
       console.log(data);
-    })
+    });
 
 
 
