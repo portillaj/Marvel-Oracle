@@ -2,7 +2,7 @@
        var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
 	   var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
 
-		var ts = new Date().getTime();
+		/*var ts = new Date().getTime();
 		 var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 		 console.log(hash);
 		 
@@ -10,7 +10,7 @@
 		 var characterId = '1009718'; // wolverine                                                                            
 
 
-		 var url = "https://gateway.marvel.com/v1/private/characters?name=wolverine&limit=1?ts=" + ts + "&apikey=" + PRIV_KEY + "&hash=" + hash;
+		 var url = "https://gateway.marvel.com/v1/public/characters?name=wolverine&limit=1?ts=" + ts + "&apikey=" + PRIV_KEY + "&hash=" + hash;
 
 		 console.log(url);
 		 $.getJSON(url, {
@@ -22,4 +22,18 @@
 		   .done(function(data) {
 		     // sort of a long dump you will need to sort through
 		     console.log(data);
-		   });
+		   });*/
+
+		  var ts = new Date().getTime();
+		 var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
+		 console.log(hash);
+
+		   var marvelAPI = "https://gateway.marvel.com/v1/public/comics?ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+		$.ajax  ({
+		   dataType: "json",
+		   url: marvelAPI
+		   })
+		   .done(function(data) {
+		     // sort of a long dump you will need to sort through
+		     console.log(data);
+		  });
