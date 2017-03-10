@@ -1,11 +1,5 @@
-var backgroundMusic = new Audio('04 Seventh Trinity.m4a');
-var backgroundMusic = new Audio('04 Seventh Trinity.m4a');
 
-backgroundMusic.loop=true;
-backgroundMusic.play();
-
-
-var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
+       var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
 	   var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
 
 		var ts = new Date().getTime();
@@ -29,4 +23,3 @@ var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
 		     // sort of a long dump you will need to sort through
 		     console.log(data);
 		   });
-
