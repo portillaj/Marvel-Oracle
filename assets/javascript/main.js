@@ -6,7 +6,7 @@
          var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
          console.log(hash);
 
-           var marvelAPI = "https://gateway.marvel.com/v1/publi/characters/1009718?name=wolverine?ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+           var marvelAPI = "https://gateway.marvel.com/v1/public/characters/1009718?name=wolverine&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
         $.ajax  ({
            dataType: "json",
            url: marvelAPI
