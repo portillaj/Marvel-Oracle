@@ -16,3 +16,62 @@
              console.log(data);
           });
 
+
+//Map stuff below.
+
+var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
+var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places&callback=initMap";
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11
+      });
+  var infoWindow = new google.maps.InfoWindow({map: map});
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      map.setCenter(pos);
+
+      var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch({
+        location: pos,
+        radius: 5000,
+        type: ['Comic Book Store']
+      }, callback);
+      
+      }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+    });
+
+    function callback(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createMarker(results[i]);
+        }
+      }
+    }
+
+    function createMarker(place) {
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
+    }
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
+  }
+};
+
+$(document).ready(function(){
+  initMap();
+});
