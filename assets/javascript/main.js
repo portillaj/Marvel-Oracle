@@ -10,7 +10,7 @@
 		 var characterId = '1009718'; // wolverine                                                                            
 
 
-		 var url = "http://gateway.marvel.com/v1/comics?ts=" + ts + "&apikey=" + PRIV_KEY + "&hash=" + hash;
+		 var url = "https://gateway.marvel.com/v1/comics?ts=" + ts + "&apikey=" + PRIV_KEY + "&hash=" + hash;
 
 		 console.log(url);
 		 $.getJSON(url, {
