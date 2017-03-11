@@ -36,17 +36,20 @@ function initMap() {
         lng: position.coords.longitude
       };
 
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('You are here.');
       map.setCenter(pos);
 
-      var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
+      var request = {
         location: pos,
         radius: 5000,
-        type: ['Comic Book Store']
-      }, callback);
-      
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
+        query: "comic",
+        type: "store"
+      };
+
+      var service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, callback);
+            
     });
 
     function callback(results, status) {
