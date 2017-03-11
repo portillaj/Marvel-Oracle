@@ -22,7 +22,36 @@
           	ironman = {
           		name : "ironman",
           		characterID : 1009368
+          	},
+          	blackWidow = {
+          		name : "black widow",
+          		characterID : 1009189
+          	},
+          	hulk = {
+          		name : "hulk",
+          		characterID : 1009351
+          	},
+          	deadpool = {
+          		name : "deadpool",
+          		characterID : 1009268
+          	},
+          	lukeCage = {
+          		name : "luke cage",
+          		characterID : 1009215
+          	},
+          	daredevil = {
+          		name : "daredevil",
+          		characterID : 1009262
+          	},
+          	thor = {
+          		name : "thor",
+          		characterID : 1009664
+          	},
+          	magneto = {
+          		name : "magneto",
+          		characterID : 1009417
           	}
+
           ];
 
           function getCharId (character) {
