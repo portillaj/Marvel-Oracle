@@ -88,3 +88,18 @@ $(document).ready(function(){
   infowindow.setContent(place.name);
   infowindow.open(map, this);
 })*/
+
+
+//scrolling effect
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
