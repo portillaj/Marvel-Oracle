@@ -1,15 +1,12 @@
+* {
+  box-sizing: border-box;
+}
 .container-fluid {
 	padding: 0;
 	margin: 0;
 }
 
 #main-section {
-	background-image: url('../images/marvel-background.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 770px;
-	min-width: 100%;
 	margin-top: 0;
 	position: relative;
 	background-attachment: fixed;
@@ -55,10 +52,32 @@
 }
 
 .pic {
-  width: 200px;
-  height: 200px;
+  height: 600px;
+  width: 722px;
+  border: 10px solid white;
+  border-radius: 10px;
 }
 
+.hide-show {
+  
+  width: 100%;
+}
+
+#bio {
+  background-color: #be0606;
+  height: 600px;
+}
+
+.desc-text {
+  color: white;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+}
+
+.desc-header {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: white;
+}
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal {
 	margin-top: 20px;
@@ -116,6 +135,7 @@
 #map{
   height: 300px;
   width: 100%;
+  display: none;
 }
 
 
