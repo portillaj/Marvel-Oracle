@@ -42,7 +42,7 @@ function initMap() {
 
       var request = {
         location: pos,
-        radius: 5000,
+        radius: 50000,
         query: "comic",
         type: "store"
       };
@@ -72,9 +72,19 @@ function initMap() {
       infowindow.setContent(place.name);
       infowindow.open(map, this);
     });
+
+    $(document).on("click", marker, function(){
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
   }
 };
 
 $(document).ready(function(){
   initMap();
 });
+
+/*$(document).on("click", marker, function(){
+  infowindow.setContent(place.name);
+  infowindow.open(map, this);
+})*/
