@@ -8,14 +8,46 @@
          console.log(hash);
 
           var character;
+          var charID;
+
+          var charArray = [
+          	spiderman = {
+          		name : "spiderman",
+          		characterID : 1009610
+          	},
+          	wolverine = {
+          		name : "wolverine",
+          		characterID : 1009718
+          	},
+          	ironman = {
+          		name : "ironman",
+          		characterID : 1009368
+          	}
+          ];
+
+          function getCharId (character) {
+          	for (var i = 0 ; i < charArray.length ; i++) {
+          		console.log(charArray[i].name);  
+          		if (character == charArray[i].name) {
+          			 charID = charArray[i].characterID;
+
+          		}    
+          	}
+
+          }
+
+
+         
+
 
 
         $("#search-button").on("click", function() {
 
         character = $(".form-control").val().trim();
-		var characterID = character;
+		
+		 getCharId(character);
 
-        var marvelAPI = "https://gateway.marvel.com/v1/public/characters/1009718?name=" + character + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+        var marvelAPI = "https://gateway.marvel.com/v1/public/characters/" + charID + "?name=" + character + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
         $.ajax  ({
            dataType: "json",
            url: marvelAPI
@@ -25,9 +57,9 @@
              console.log(response);
              
 
-           
 
 	             var search = response.data;
+
 	             var p = $("<img>").addClass("pic").attr("src", search.results[0].thumbnail.path + "." + search.results[0].thumbnail.extension);
 	             /*p.text(search.results[0].thumbnail.path);*/
 	             $("#main-section").append(p);	
