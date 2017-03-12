@@ -5,9 +5,9 @@
 
 #main-section {
 	background-image: url('../images/marvel-background.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 	height: 770px;
 	min-width: 100%;
 	margin-top: 0;
