@@ -73,10 +73,13 @@ $("#search-button").on("click", function() {
   //get the characterID from the character that the user entered
   getCharId(character);
 
+
   //marvelAPI URL
   var marvelAPI = "https://gateway.marvel.com/v1/public/characters/" + 
   charID + "?name=" + character + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
   "&hash=" + hash;
+  // var getComics = "http://gateway.marvel.com/v1/public/comics/" + charID + "&ts=" + ts + "?apikey=" + PUBLIC_KEY + "&hash=" + hash;
+  // console.log("getComics: " + getComics);
   //AJAX Call
   $.ajax  ({
      dataType: "json",
@@ -93,11 +96,14 @@ $("#search-button").on("click", function() {
          $(".bio-header-section").html(descriptionHeader);
          var descriptionText = $("<p>").addClass("desc-text");
          var comicDisplay;
+         var testing = search.results[0].comics.items[0].resourceURI.getComics;
+         console.log(testing);
 
          //Taylor this is the part I am trying to get the three comic books to display
          //for loop that will choose the first three comic books
          for (var i = 0; i < 3; i++) {
-            comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[0].comics.collectionURI);
+            comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[0].comics.items[i].resourceURI.getComics);
+            
             $(".comic-book-section").append(comicDisplay);
          }
 
