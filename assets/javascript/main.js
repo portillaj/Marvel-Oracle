@@ -87,19 +87,32 @@ $("#search-button").on("click", function() {
          var search = response.data;
 
          var img = $("<img>").addClass("pic").attr("src", search.results[0].thumbnail.path + "." + search.results[0].thumbnail.extension);
-         $("#pic-area").append(img);	
-         var descriptionHeader = $("<h2>").addClass("desc-header");
+         $("#pic-area").html(img);	
+         var descriptionHeader = $("<h2>").addClass("desc-header").html("About");
+
+         $(".bio-header-section").html(descriptionHeader);
          var descriptionText = $("<p>").addClass("desc-text");
          var comicDisplay;
-         for (var i = 0; i < 3; i++) {
-            comicDisplay = $("<img>").addClass("pic").attr("src", search.results[0].series.items[i].resourceURI);
-         }
-    
-         descriptionHeader.html("About");
-         descriptionText.html(search.results[0].description);
 
-         $("#bio").append(descriptionHeader);
-         $("#bio").append(descriptionText);
+         //Taylor this is the part I am trying to get the three comic books to display
+         //for loop that will choose the first three comic books
+         for (var i = 0; i < 3; i++) {
+            comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[0].comics.collectionURI);
+            $(".comic-book-section").append(comicDisplay);
+         }
+
+
+
+
+
+
+
+
+
+
+         descriptionText.html(search.results[0].description);//get the character description from api
+         $(".bio-description-section").html(descriptionText); //add the character description to the page
+         $(".form-control").val(""); //clear the search bar
     });//end done function
 });//end search button click
 
@@ -171,9 +184,10 @@ function initMap() {
 }; //This ends initMap.
 
 //Sets up map as soon as the page is loaded. Only one function to call.
-$(document).ready(function(){
-  initMap();
-});
+// $(document).ready(function(){
+//   initMap();
+// });
+initMap();
 
 
 //scrolling effect
@@ -187,6 +201,5 @@ $('a[href^="#"]').on('click', function(event) {
             scrollTop: target.offset().top
         }, 1000);
     }
-
 });
 

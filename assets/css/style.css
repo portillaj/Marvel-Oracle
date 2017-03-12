@@ -58,6 +58,11 @@
   border-radius: 10px;
 }
 
+.comic-pic {
+  width: 100px;
+  height: 100px;
+}
+
 .hide-show {
   
   width: 100%;
