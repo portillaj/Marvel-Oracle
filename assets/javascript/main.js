@@ -1,34 +1,122 @@
-
+//variables for API and characters, and characterID
 var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
 var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
-
 var ts = new Date().getTime();
 var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
-console.log(hash);
+var character;
+var charID;
 
-var marvelAPI = "https://gateway.marvel.com/v1/public/characters/1009718?name=wolverine&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
-$.ajax  ({
-  dataType: "json",
-  url: marvelAPI
-})
-.done(function(data) {
-// sort of a long dump you will need to sort through
-  console.log(data);
-});
+//list of character objects     
+var charArray = [
+spiderman = {
+	name : "spiderman",
+	characterID : 1009610
+},
+wolverine = {
+	name : "wolverine",
+	characterID : 1009718
+},
+ironman = {
+	name : "ironman",
+	characterID : 1009368
+},
+blackWidow = {
+	name : "black widow",
+	characterID : 1009189
+},
+hulk = {
+	name : "hulk",
+	characterID : 1009351
+},
+deadpool = {
+	name : "deadpool",
+	characterID : 1009268
+},
+lukeCage = {
+	name : "luke cage",
+	characterID : 1009215
+},
+daredevil = {
+	name : "daredevil",
+	characterID : 1009262
+},
+thor = {
+	name : "thor",
+	characterID : 1009664
+},
+magneto = {
+	name : "magneto",
+	characterID : 1009417
+}
+
+]; //end charArray
+
+//function that gets character ID from character name
+function getCharId (character) {
+  //go through character array
+	for (var i = 0 ; i < charArray.length ; i++) {
+    //if character === gets name return the character ID
+		if (character == charArray[i].name) {
+			 charID = charArray[i].characterID;
+
+		}else{
+      //display character not found(check spelling)
+    }
+	}//end for loop
+
+}//end function
+
+$("#search-button").on("click", function() {
+  //get character from what user entered
+  character = $(".form-control").val().trim();
+  $('.hide-show').css('display', 'block');
+  //get the characterID from the character that the user entered
+  getCharId(character);
+
+  //marvelAPI URL
+  var marvelAPI = "https://gateway.marvel.com/v1/public/characters/" + 
+  charID + "?name=" + character + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
+  "&hash=" + hash;
+  //AJAX Call
+  $.ajax  ({
+     dataType: "json",
+     url: marvelAPI
+     }).done(function(response) {
+       // sort of a long dump you will need to sort through
+       console.log(response);
+         var search = response.data;
+
+         var img = $("<img>").addClass("pic").attr("src", search.results[0].thumbnail.path + "." + search.results[0].thumbnail.extension);
+         $("#pic-area").append(img);	
+         var descriptionHeader = $("<h2>").addClass("desc-header");
+         var descriptionText = $("<p>").addClass("desc-text");
+         var comicDisplay;
+         for (var i = 0; i < 3; i++) {
+            comicDisplay = $("<img>").addClass("pic").attr("src", search.results[0].series.items[i].resourceURI);
+         }
+    
+         descriptionHeader.html("About");
+         descriptionText.html(search.results[0].description);
+
+         $("#bio").append(descriptionHeader);
+         $("#bio").append(descriptionText);
+    });//end done function
+});//end search button click
 
 
 //Map stuff below.
-
 var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
-var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places&callback=initMap";
+var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places";
 
+//Set up map and tap the map div. Yes, it's a long function. It needs to stay
+//together because of reasons of scope and getting the markers to work 
+//properly.
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11
       });
-  var infoWindow = new google.maps.InfoWindow({map: map});
 
-  // Try HTML5 geolocation.
+  //HTML5 geolocation. Part of initMap
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -36,10 +124,10 @@ function initMap() {
         lng: position.coords.longitude
       };
 
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('You are here.');
+      //Map center is the geolocation that just got found. Part of initMap.
       map.setCenter(pos);
 
+      //Looking for all close stores that sell comics. Needs to be in initMap.
       var request = {
         location: pos,
         radius: 50000,
@@ -47,11 +135,14 @@ function initMap() {
         type: "store"
       };
 
+      //Doing a text search of the places library. Still part of initMap.
       var service = new google.maps.places.PlacesService(map);
       service.textSearch(request, callback);
             
     });
 
+    //If the library is up, markers are created for local stores selling comics.
+    //Part of initMap.
     function callback(results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
@@ -60,35 +151,29 @@ function initMap() {
       }
     }
 
+    //Creating the markers, adding the info windows, and click listeners.
+    //Part of initMap.
     function createMarker(place) {
+      var infoWindow = new google.maps.InfoWindow({
+        content: "<div class='text-center'>" + place.name + "<br>" + 
+        place.formatted_address + "</div>"
+      });
       var placeLoc = place.geometry.location;
       var marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location
       });
+      marker.addListener("click", function(){
+        infoWindow.open(map, this);
+      });
     }
-
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.setContent(place.name);
-      /*infowindow.setContent(results.formatted_address);*/
-      infowindow.open(map, this);
-    });
-
-    $(document).on("click", marker, function(){
-      infowindow.setContent(place.name);
-      infowindow.open(map, this);
-    });
   }
-};
+}; //This ends initMap.
 
+//Sets up map as soon as the page is loaded. Only one function to call.
 $(document).ready(function(){
   initMap();
 });
-
-/*$(document).on("click", marker, function(){
-  infowindow.setContent(place.name);
-  infowindow.open(map, this);
-})*/
 
 
 //scrolling effect
@@ -104,3 +189,4 @@ $('a[href^="#"]').on('click', function(event) {
     }
 
 });
+
