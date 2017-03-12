@@ -93,7 +93,7 @@ $("#search-button").on("click", function() {
          var descriptionText = $("<p>").addClass("desc-text");
          var comicDisplay;
          for (var i = 0; i < 3; i++) {
-            comicDisplay = $("<img>").addClass("pic").attr("src", search.results[0].comics.items[i].resourceURI);
+            comicDisplay = $("<img>").addClass("pic").attr("src", search.results[0].series.items[i].resourceURI);
          }
     
          descriptionHeader.html("About");
