@@ -208,6 +208,8 @@ $('a[href^="#"]').on('click', function(event) {
     }
 });
 
+//modal section
+
 
 
 

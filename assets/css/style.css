@@ -156,9 +156,10 @@
   margin-top: 100px;
   font-family: 'Acme', sans-serif;
   color: white;
+  font-size: 40px;
 }
 
-.bio-section img {
+.bio-img {
   margin-top: 100px;
   width: 306px;
   height: 306px;
@@ -166,6 +167,24 @@
   border-radius: 50%;
 }
 
+.bio-modal {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.bio-text {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  margin-right: 10px;
+}
 .bio-section img:hover{ 
   background-color:#f2f2f2; 
   color:#336699 !important; 
