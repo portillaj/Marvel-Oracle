@@ -195,7 +195,6 @@ function initMap() {
 // });
 initMap();
 
-
 //scrolling effect
 $('a[href^="#"]').on('click', function(event) {
 
@@ -208,4 +207,8 @@ $('a[href^="#"]').on('click', function(event) {
         }, 1000);
     }
 });
+
+
+
+
 
