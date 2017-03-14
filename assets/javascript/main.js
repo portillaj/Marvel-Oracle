@@ -66,10 +66,58 @@ function getCharId (character) {
 
 }//end function
 
-$("#search-button").on("click", function() {
-  
+
+
+// New voice powered search functions
+
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'search *tag': function(tag) {
+      alert("TESTING..." + tag);
+      character = tag;
+    var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
+    var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
+    var ts = new Date().getTime();
+    var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
+    var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+   
+
+
+        $.ajax  ({
+           dataType: "json",
+           url: marvelAPI
+           })
+           .done(function(data) {
+             // sort of a long dump you will need to sort through
+             console.log(data);
+             $("#testzone").hmtl(data);
+          });
+
+     MarvelCall(character);
+
+    }
+    
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+
+
+
+
+
+
+
+
+function MarvelCall(character) 
+{ 
   //get character from what user entered
-  character = $(".form-control").val().trim();
+
   $('.character-show').css('display', 'block');
   //get the characterID from the character that the user entered
   getCharId(character);
@@ -127,7 +175,19 @@ $("#search-button").on("click", function() {
          $(".bio-description-section").html(descriptionText); //add the character description to the page
          $(".form-control").val(""); //clear the search bar
     });//end done function
-});//end search button click
+
+};//end search
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Map stuff below.
