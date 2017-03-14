@@ -93,8 +93,11 @@ $("#search-button").on("click", function() {
          var img = $("<img>").addClass("pic").attr("src", search.results[0].thumbnail.path + "." + search.results[0].thumbnail.extension);
          $("#pic-area").html(img);	
          var descriptionHeader = $("<h2>").addClass("desc-header").html("About");
+         var comicHeader = $("<h2>").addClass("comic-header").html("Comics");
 
          $(".bio-header-section").html(descriptionHeader);
+         $(".comic-book-section").html(comicHeader);
+
          var descriptionText = $("<p>").addClass("desc-text");
          var comicDisplay;
          var testing = search.results[0].comics.items[0].resourceURI.getComics;
@@ -119,7 +122,6 @@ $("#search-button").on("click", function() {
             		console.log(response);
             	}
          });
-
 
          descriptionText.html(search.results[0].description);//get the character description from api
          $(".bio-description-section").html(descriptionText); //add the character description to the page
