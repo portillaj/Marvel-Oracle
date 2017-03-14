@@ -7,22 +7,6 @@ var character;
 var charID;
 
 
-//function that gets character ID from character name
-function getCharId (character) {
-  //go through character array
-	for (var i = 0 ; i < charArray.length ; i++) {
-    //if character === gets name return the character ID
-		if (character == charArray[i].name) {
-			 charID = charArray[i].characterID;
-
-		}else{
-      //display character not found(check spelling)
-    }
-	}//end for loop
-
-}//end function
-
-
 
 // New voice powered search functions
 
@@ -110,7 +94,7 @@ function MarvelCall()
 
          //Taylor this is the part I am trying to get the three comic books to display
          //for loop that will choose the first three comic books
-         var comicAPI = "http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=thisWeek&dateRange=2015-01-01%2C2017-01-01&characters=1009664&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
+         var comicAPI = "http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=thisWeek&dateRange=2015-01-01%2C2017-01-01&characters=" + charID + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
   		"&hash=" + hash;
 
 
