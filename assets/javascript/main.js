@@ -67,9 +67,10 @@ function getCharId (character) {
 }//end function
 
 $("#search-button").on("click", function() {
+  
   //get character from what user entered
   character = $(".form-control").val().trim();
-  $('.hide-show').css('display', 'block');
+  $('.character-show').css('display', 'block');
   //get the characterID from the character that the user entered
   getCharId(character);
 
@@ -106,14 +107,6 @@ $("#search-button").on("click", function() {
             
             $(".comic-book-section").append(comicDisplay);
          }
-
-
-
-
-
-
-
-
 
 
          descriptionText.html(search.results[0].description);//get the character description from api
@@ -195,18 +188,11 @@ function initMap() {
 // });
 initMap();
 
-//scrolling effect
-$('a[href^="#"]').on('click', function(event) {
-
-    var target = $(this.getAttribute('href'));
-
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1000);
-    }
+$("#top").click(function(e){       
+    e.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, "slow");
 });
+
 
 //modal section
 

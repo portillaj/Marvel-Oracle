@@ -6,6 +6,10 @@
 	margin: 0;
 }
 
+.character-show {
+  margin-top: 0;
+  height: 600px;
+}
 #main-section {
 	margin-top: 0;
 	position: relative;
@@ -14,9 +18,11 @@
 
 .search-bar {
 	position: absolute;
-	left: 550px;
-	top: 500px;
+	left: 45%;
+	top: 63%;
 	width: 400px;
+  margin-right: -400px;
+  margin-left: -137px;
 }
 
 .label {
@@ -31,15 +37,17 @@
 
 .mic {
   position: absolute;
-  top: 370px;
-  left: 680px;
+  top: 45%;
+  left: 53%;
   width: 100px;
   height: 100px;
+  margin-right: -100px;
+  margin-left: -100px;
 }
 
 .spidey {
 	width: 100%;
-	height: 100%;
+	height: 780px;
 }
 
 .logo {
@@ -52,10 +60,13 @@
 }
 
 .pic {
-  height: 600px;
-  width: 722px;
-  border: 10px solid white;
-  border-radius: 10px;
+  height: 700px;
+  width: 700px;
+}
+
+.character-show {
+  display: none;
+  height: 800px;
 }
 
 .comic-pic {
@@ -64,13 +75,12 @@
 }
 
 .hide-show {
-  
   width: 100%;
 }
 
 #bio {
   background-color: #be0606;
-  height: 600px;
+  height: 700px;
 }
 
 .desc-text {
@@ -140,16 +150,19 @@
 #map{
   height: 500px;
   width: 100%;
+ 
 }
 .bio-section-row {
+  margin-top: 0;
   background-image: url('../images/bio-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 
 }
 .bio-section {
-  height: 600px;
+  height: 700px;
   margin-left: 20px;
+  text-align: center;
 }
 
 .bio-header {
@@ -161,8 +174,8 @@
 
 .bio-img {
   margin-top: 100px;
-  width: 306px;
-  height: 306px;
+  width: 250px;
+  height: 250px;
   border: 5px solid white;
   border-radius: 50%;
 }
@@ -202,6 +215,147 @@
   font-style: italic;
   color: #DB3D3F;
 }
+
+
+
+/*******MEDIA QUERIES*********/
+@media only screen and (max-width: 1100px) {
+    .bio-img {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+
+  .logo {
+    width: 400px;
+    height: 100px;
+    left: 56%;
+  }
+
+  .mic {
+    width: 90px;
+    height: 90px;
+    left: 57%;
+  }
+
+  .search-bar {
+    width: 380px;
+    height: 117px;
+  }
+
+  .label {
+    margin-left: 55px;
+  }
+    .bio-img {
+    margin-top: 100px;
+    width: 160px;
+    height: 160px;
+    margin-right: 5px;
+  }
+  .name {
+    color: white;
+    font-size: 18px;
+  }
+.title {
+  font-style: italic;
+  color: #DB3D3F; 
+  font-size: 14px;
+
+}
+}
+
+@media only screen and (max-width: 765px) {
+
+  .logo {
+    width: 300px;
+    height: 80px;
+    left: 65%;
+  }
+
+  .mic {
+    width: 70px;
+    height: 70px;
+    left: 60%;
+    top: 38%;
+  }
+
+  .search-bar {
+    width: 300px;
+    height: 100px;
+    left: 50%;
+    top: 55%;
+  }
+
+  .label {
+    font-size: 20px;
+    margin-left: 37px;
+  }
+
+  .hvr-shutter-out-horizontal {
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 10px;
+  }
+    .bio-img {
+    margin-top: 100px;
+    width: 260px;
+    height: 260px;
+    margin-right: 5px;
+  }
+  .name {
+    color: white;
+    font-size: 24px;
+  }
+.title {
+  font-style: italic;
+  color: #DB3D3F; 
+  font-size: 20px;
+
+  }
+}
+
+
+
+@media only screen and (max-width: 554px) {
+  .spidey {
+    height: 350px;
+  }
+  .logo {
+    left: 74%;
+    top: 0;
+  }
+
+  .mic {
+    left: 65%;
+    top: 30%;
+  }
+  .search-bar {
+    left: 51%;
+  }
+    .bio-img {
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+    margin-left: -17px;
+  }
+  .bio-header {
+    font-size: 24px;
+  }
+  .name {
+    color: white;
+    font-size: 14px;
+  }
+.title {
+  font-style: italic;
+  color: #DB3D3F; 
+  font-size: 12px;
+  }
+}
+
   
 
 
