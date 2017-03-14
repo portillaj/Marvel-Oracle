@@ -50,9 +50,10 @@ if (annyang) {
             charID = charobj.data.results[0].id;
             character = charobj.data.results[0].name;
             console.log(charID + " is the ID and name is: " + character);
+                 MarvelCall();
           });
 
-     MarvelCall(character);
+
 
     }
     
@@ -70,9 +71,10 @@ if (annyang) {
 
 
 
-function MarvelCall(character) 
+function MarvelCall() 
 { 
   //get character from what user entered
+  console.log("MARVEL, CALLED!");
 
   $('.character-show').css('display', 'block');
   //get the characterID from the character that the user entered
