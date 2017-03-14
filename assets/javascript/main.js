@@ -102,11 +102,23 @@ $("#search-button").on("click", function() {
 
          //Taylor this is the part I am trying to get the three comic books to display
          //for loop that will choose the first three comic books
-         for (var i = 0; i < 3; i++) {
-            comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[0].comics.items[i].resourceURI.getComics);
+         var comicAPI = "http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=thisWeek&dateRange=2015-01-01%2C2017-01-01&characters=1009664&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
+  		"&hash=" + hash;
+
+
+         $.ajax  ({
+		     dataType: "json",
+		     url: comicAPI
+		     }).done(function(response) {
+         		for (var i = 0; i < 3; i++) {
+         			console.log(response);
+         			var search = response.data;
+            		comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[i].images[0].path + "." + search.results[i].images[0].extension);
             
-            $(".comic-book-section").append(comicDisplay);
-         }
+            		$(".comic-book-section").append(comicDisplay);
+            		console.log(response);
+            	}
+         });
 
 
          descriptionText.html(search.results[0].description);//get the character description from api
