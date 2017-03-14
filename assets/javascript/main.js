@@ -44,12 +44,12 @@ if (annyang) {
            dataType: "json",
            url: marvelAPI
            })
-           .done(function(data) {
+           .done(function(charobj) {
              // sort of a long dump you will need to sort through
-             console.log(data);
-            charID = data.results[0].id;
-            character = data.results[0].name;
-            console.log(character.id + " is the ID and name is: " + character);
+             console.log(charobj);
+            charID = charobj.data.results[0].id;
+            character = charobj.data.results[0].name;
+            console.log(charID + " is the ID and name is: " + character);
           });
 
      MarvelCall(character);
