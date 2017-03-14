@@ -77,7 +77,6 @@ function MarvelCall(character)
 
   $('.character-show').css('display', 'block');
   //get the characterID from the character that the user entered
-  getCharId(character);
 
 
   //marvelAPI URL
