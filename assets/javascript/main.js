@@ -6,7 +6,6 @@ var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 var character;
 var charID;
 
-]; //end charArray
 
 //function that gets character ID from character name
 function getCharId (character) {
