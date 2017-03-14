@@ -6,49 +6,6 @@ var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 var character;
 var charID;
 
-//list of character objects     
-var charArray = [
-spiderman = {
-	name : "spiderman",
-	characterID : 1009610
-},
-wolverine = {
-	name : "wolverine",
-	characterID : 1009718
-},
-ironman = {
-	name : "ironman",
-	characterID : 1009368
-},
-blackWidow = {
-	name : "black widow",
-	characterID : 1009189
-},
-hulk = {
-	name : "hulk",
-	characterID : 1009351
-},
-deadpool = {
-	name : "deadpool",
-	characterID : 1009268
-},
-lukeCage = {
-	name : "luke cage",
-	characterID : 1009215
-},
-daredevil = {
-	name : "daredevil",
-	characterID : 1009262
-},
-thor = {
-	name : "thor",
-	characterID : 1009664
-},
-magneto = {
-	name : "magneto",
-	characterID : 1009417
-}
-
 ]; //end charArray
 
 //function that gets character ID from character name
@@ -91,7 +48,9 @@ if (annyang) {
            .done(function(data) {
              // sort of a long dump you will need to sort through
              console.log(data);
-             $("#testzone").hmtl(data);
+            charID = data.results.id;
+            character = data.results.name;
+            console.log(character.id + " is the ID and name is: " + character);
           });
 
      MarvelCall(character);
@@ -106,8 +65,6 @@ if (annyang) {
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
 }
-
-
 
 
 
