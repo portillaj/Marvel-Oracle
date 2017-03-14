@@ -47,8 +47,8 @@ if (annyang) {
            .done(function(data) {
              // sort of a long dump you will need to sort through
              console.log(data);
-            charID = data.results.id;
-            character = data.results.name;
+            charID = data.results[0].id;
+            character = data.results[0].name;
             console.log(character.id + " is the ID and name is: " + character);
           });
 
