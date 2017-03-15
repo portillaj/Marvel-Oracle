@@ -21,7 +21,13 @@ if (annyang) {
     var ts = new Date().getTime();
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
     var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+     $('#section2').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
    
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
 
 
         $.ajax  ({
