@@ -8,7 +8,6 @@ var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 var character;
 var charID;
 
-<<<<<<< HEAD
 //random background 
 var randomback = Math.floor((Math.random() * 8) + 1);
 console.log(randomback);
@@ -16,8 +15,7 @@ console.log(randomback);
 // $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
 console.log("Work darn it");
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
-=======
->>>>>>> refs/remotes/origin/master
+
 // New voice powered search functions
 
 if (annyang) {
@@ -31,11 +29,7 @@ if (annyang) {
     var ts = new Date().getTime();
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
     var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
-<<<<<<< HEAD
-   
 
-=======
->>>>>>> refs/remotes/origin/master
 
         $.ajax  ({
            dataType: "json",
