@@ -1,4 +1,6 @@
-//variables for API and characters, and characterID
+console.log("WTF");
+
+//variables for API and characters, and characterID  Q
 var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
 var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
 var ts = new Date().getTime();
@@ -6,8 +8,13 @@ var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 var character;
 var charID;
 
+//random background 
+var randomback = Math.floor((Math.random() * 8) + 1);
+console.log(randomback);
 
-
+// $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
+console.log("Work darn it");
+$("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
 // New voice powered search functions
 
 if (annyang) {
@@ -21,13 +28,7 @@ if (annyang) {
     var ts = new Date().getTime();
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
     var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
-     $('#section2').animate({
-        scrollTop: $(hash).offset();
-      }, 800, function(){
    
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
 
 
         $.ajax  ({
@@ -42,6 +43,9 @@ if (annyang) {
             console.log(charID + " is the ID and name is: " + character);
                  MarvelCall();
           });
+
+
+
     }
     
   };
