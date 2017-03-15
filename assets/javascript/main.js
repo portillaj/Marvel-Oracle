@@ -59,10 +59,20 @@ if (annyang) {
 
 
 function scrolling() {
+<<<<<<< HEAD
     setTimeout(function(){
       console.log("scroll triggered");
     }, 500);
 }
+=======
+     $('body').delay(2000) //wait 2 seconds
+        .animate({
+            //animate jQuery's custom "scrollTop" style
+            //grab the value as the offset of #second from the top of the page
+            'scrollTop': $('#section2').offset().top
+        }, 800); //animate over 800ms, change this to however long you want it to anim
+}//end function
+>>>>>>> origin/master
 
 function MarvelCall() 
 { 
