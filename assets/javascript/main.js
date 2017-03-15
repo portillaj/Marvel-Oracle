@@ -60,8 +60,8 @@ if (annyang) {
 
 function scrolling() {
     setTimeout(function(){
-      alert("working");
-    }, 2000);
+      console.log("scroll triggered");
+    }, 500);
 }
 
 function MarvelCall() 
