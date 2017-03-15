@@ -8,6 +8,7 @@ var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 var character;
 var charID;
 
+<<<<<<< HEAD
 //random background 
 var randomback = Math.floor((Math.random() * 8) + 1);
 console.log(randomback);
@@ -15,6 +16,8 @@ console.log(randomback);
 // $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
 console.log("Work darn it");
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
+=======
+>>>>>>> refs/remotes/origin/master
 // New voice powered search functions
 
 if (annyang) {
@@ -22,14 +25,17 @@ if (annyang) {
   var commands = {
     'search *tag': function(tag) {
       alert("TESTING..." + tag);
-      character = tag;
+    character = tag;
     var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
     var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
     var ts = new Date().getTime();
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
     var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+<<<<<<< HEAD
    
 
+=======
+>>>>>>> refs/remotes/origin/master
 
         $.ajax  ({
            dataType: "json",
@@ -58,14 +64,17 @@ if (annyang) {
 }
 
 
-
-
-
+function scrolling() {
+    setTimeout(function(){
+      alert("working");
+    }, 2000);
+}
 
 function MarvelCall() 
 { 
   //get character from what user entered
   console.log("MARVEL, CALLED!");
+  scrolling();
 
   $('.character-show').css('display', 'block');
   //get the characterID from the character that the user entered
@@ -125,14 +134,6 @@ function MarvelCall()
     });//end done function
 
 };//end search
-
-
-
-
-
-
-
-
 
 
 
@@ -214,11 +215,6 @@ $("#top").click(function(e){
     e.preventDefault();
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, "slow");
 });
-
-
-//modal section
-
-
 
 
 
