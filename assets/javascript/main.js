@@ -42,6 +42,7 @@ if (annyang) {
             character = charobj.data.results[0].name;
             console.log(charID + " is the ID and name is: " + character);
                  MarvelCall();
+                 scrolling();
           });
 
 
