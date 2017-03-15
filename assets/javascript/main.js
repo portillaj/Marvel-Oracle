@@ -109,7 +109,7 @@ function MarvelCall()
 
          //Taylor this is the part I am trying to get the three comic books to display
          //for loop that will choose the first three comic books....
-         var comicAPI = "https://gateway.marvel.com:80/v1/public/comics?dateDescriptor=thisWeek&dateRange=2015-01-01%2C2017-01-01&characters=" + charID + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
+         var comicAPI = "https://gateway.marvel.com:80/v1/public/comics?dateDescriptor=thisWeek&dateRange=2010-01-01%2C2017-01-01&characters=" + charID + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
   		"&hash=" + hash;
 
 
@@ -118,6 +118,7 @@ function MarvelCall()
 		     url: comicAPI
 		     }).done(function(response) {
          		for (var i = 0; i < 3; i++) {
+              console.log("Comics called...")
          			console.log(response);
          			var search = response.data;
             		comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[i].images[0].path + "." + search.results[i].images[0].extension);
