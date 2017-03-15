@@ -22,7 +22,7 @@ if (annyang) {
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
     var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
      $('#section2').animate({
-        scrollTop: $(hash).offset().top
+        scrollTop: $(hash).offset();
       }, 800, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
@@ -42,9 +42,6 @@ if (annyang) {
             console.log(charID + " is the ID and name is: " + character);
                  MarvelCall();
           });
-
-
-
     }
     
   };
