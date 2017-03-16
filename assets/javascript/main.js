@@ -8,6 +8,7 @@
     messagingSenderId: "160783325443"
   };
   firebase.initializeApp(config);
+
   var database = firebase.database();
 
 
@@ -72,6 +73,21 @@ if (annyang) {
       $("#searchbox").attr("placeholder", tag);
 
     character = tag;
+    CharHunt();
+    
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+
+
+function CharHunt()
+{
+    console.log("charHunt called success");
     var ts = new Date().getTime();
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
     var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
@@ -93,19 +109,12 @@ if (annyang) {
               });
                  MarvelCall();
                  scrolling();
+            });
 
-          });
+            }
 
-    }
-    
-  };
-
-  // Add our commands to annyang
-  annyang.addCommands(commands);
-
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
 }
+
 
 
 function scrolling() {
