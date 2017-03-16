@@ -118,20 +118,20 @@ font-family: 'Architects Daughter', cursive;
   margin-top: 100px;
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
-  color: white;
+  color: black;
 }
 
 .name-header {
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
   color: white;
-  font-size: 25px;
+  font-size: 55px;
 }
 .comic-header {
   margin-top: 20px;
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
-  color: white;
+  color: black;
 }
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal {
