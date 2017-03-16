@@ -22,7 +22,7 @@ if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'search *tag': function(tag) {
-      alert("TESTING..." + tag);
+      console.log("Searching... " + tag);
     character = tag;
     // var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
     // var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
