@@ -1,13 +1,6 @@
 
-
-
-
-
-
-$( document ).ready(function() {
-
   //firebase init
-var config = {
+  var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
     authDomain: "marvel-44df2.firebaseapp.com",
     databaseURL: "https://marvel-44df2.firebaseio.com",
@@ -15,6 +8,13 @@ var config = {
     messagingSenderId: "160783325443"
   };
   firebase.initializeApp(config);
+
+
+
+
+
+$( document ).ready(function() {
+
 
 //variables for API and characters, and characterID  Q
 var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
