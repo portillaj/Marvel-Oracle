@@ -109,7 +109,7 @@ function MarvelCall()
 
          //Taylor this is the part I am trying to get the three comic books to display
          //for loop that will choose the first three comic books....
-         var comicAPI = "https://gateway.marvel.com:80/v1/public/comics?dateDescriptor=thisWeek&dateRange=2010-01-01%2C2017-01-01&characters=" + charID + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
+         var comicAPI = "https://gateway.marvel.com/v1/public/comics?dateDescriptor=thisWeek&dateRange=2010-01-01%2C2017-01-01&characters=" + charID + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
   		"&hash=" + hash;
 
 
