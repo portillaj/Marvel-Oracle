@@ -13,7 +13,7 @@ var randomback = Math.floor((Math.random() * 8) + 1);
 console.log(randomback);
 
 // hide map
-// $("#map").hide();
+$("#map").hide();
 
 // randomize hero backgrounds
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
