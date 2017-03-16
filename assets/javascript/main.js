@@ -1,5 +1,12 @@
 
-//firebase init
+
+
+
+
+
+$( document ).ready(function() {
+
+  //firebase init
 var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
     authDomain: "marvel-44df2.firebaseapp.com",
@@ -8,11 +15,6 @@ var config = {
     messagingSenderId: "160783325443"
   };
   firebase.initializeApp(config);
-
-
-
-
-$( document ).ready(function() {
 
 //variables for API and characters, and characterID  Q
 var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
@@ -25,7 +27,7 @@ var charID;
 
 //random background 
 var randomback = Math.floor((Math.random() * 8) + 1);
-console.log(randomback);
+
 
 // hide map
 $("#map").hide();
@@ -80,12 +82,13 @@ if (annyang) {
             charID = charobj.data.results[0].id;
             character = charobj.data.results[0].name;
             console.log(charID + " is the ID and name is: " + character);
-                 MarvelCall();
-                 scrolling();
-
+            
             database.ref().push({
               slot01: character,
               });
+                 MarvelCall();
+                 scrolling();
+
           });
 
 
@@ -169,7 +172,6 @@ function MarvelCall()
             		comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[i].images[0].path + "." + search.results[i].images[0].extension);
             
             		$(".comic-book-section").append(comicDisplay);
-            		console.log(response);
             	}
          });
 
