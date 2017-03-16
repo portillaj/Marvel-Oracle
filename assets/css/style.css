@@ -114,6 +114,12 @@ font-family: 'Architects Daughter', cursive;
   font-size: 20px;
 }
 
+.desc-searches {
+  color: gray;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 12px;
+}
+
 .desc-header {
   margin-top: 100px;
   font-family: 'Unmasked BB';

@@ -37,7 +37,12 @@ $("#devbios").hide();
 // randomize hero backgrounds
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
 
+  database.ref().limitToLast(3).on("child_added", function(childSnapshot) {
+          
+             $("#recent").append("<div><center>" + childSnapshot.val().slot01 + "</center></div>");
+                 console.log(childSnapshot.val().slot01);
 
+          });
 
 
 
