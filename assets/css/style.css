@@ -406,7 +406,32 @@ font-family: 'Architects Daughter', cursive;
 
 
 
+.wrapper {
+   border:1px solid #000;
+   display:inline-block;
+   position:relative;
+   width: 450px;
+}
 
+input,
+.text-button {
+   background-color:transparent;
+   border:0;
+}
+
+.text-button {
+   position:absolute;
+   right:0;
+   top:0;
+   width: 70px;
+   height: 34px;
+   border: 2px solid #cccccc ;
+   
+}
+
+input {
+   padding-right:30px; /* button padding */
+}
 
 
 
