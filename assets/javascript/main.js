@@ -1,4 +1,6 @@
 
+
+
   //firebase init
   var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
@@ -10,11 +12,6 @@
   firebase.initializeApp(config);
 
   var database = firebase.database();
-
-
-
-
-$( document ).ready(function() {
 
 
 //variables for API and characters, and characterID  Q
