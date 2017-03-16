@@ -48,7 +48,7 @@ $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + r
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'show nearby comic shops': function()
+    'show nearby': function()
     { console.log("showing MAP");
     initMap();
     $("#map").show();
