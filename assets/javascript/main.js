@@ -110,9 +110,7 @@ function CharHunt()
                  scrolling();
             });
 
-            }
-
-}
+ }
 
 
 
