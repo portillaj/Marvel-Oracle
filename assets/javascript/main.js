@@ -97,7 +97,7 @@ function MarvelCall()
          var img = $("<img>").addClass("pic").attr("src", search.results[0].thumbnail.path + "." + search.results[0].thumbnail.extension);
          $("#pic-area").html(img);	
          var descriptionHeader = $("<h2>").addClass("desc-header").html("About");
-         var comicHeader = $("<h2>").addClass("comic-header").html("Comics");
+         var comicHeader = $("<h2>").addClass("comic-header").html("Popular Comics Issues");
 
          $(".bio-header-section").html(descriptionHeader);
          $(".comic-book-section").html(comicHeader);
