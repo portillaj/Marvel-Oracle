@@ -16,7 +16,7 @@ console.log(randomback);
 // hide map
 $("#map").hide();
 $("#section2").hide();
-$("#bio").hide();
+$("#devbios").hide();
 
 // randomize hero backgrounds
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
@@ -40,9 +40,9 @@ if (annyang) {
   },
       'who made this': function()
     { console.log("dev team reveal");
-    $("#bio").show();
+    $("#devbios").show();
     $('body').delay(100) //wait .1 seconds
-        .animate({ 'scrollTop': $('#bio').offset().top
+        .animate({ 'scrollTop': $('#devbios').offset().top
         }, 300); //animate over 800ms, change this to however long you want it to anim
 
   },
