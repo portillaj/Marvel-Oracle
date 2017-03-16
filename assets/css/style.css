@@ -102,17 +102,17 @@
 
 .form-control
 {
- font-family: 'Mighty Zeo 2.0';
- src: url('assets/font/MIGHZ.TTF');
- font-style: italic;
- font-size: 20px;
+ font-family: 'Bottix';
+ src: url('assets/font/bottix.ttf');
+/* font-style: italic;
+*/ font-size: 20px;
 
 }
 
 .desc-text {
   color: white;
-  font-family: 'Mighty Zeo 2.0';
-  src: url('assets/font/MIGHZ.TTF');
+  font-family: 'Bottix';
+  src: url('assets/font/bottix.ttf');
   font-size: 20px;
 }
 
