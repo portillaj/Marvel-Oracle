@@ -15,7 +15,7 @@ console.log(randomback);
 
 // hide map
 $("#map").hide();
-// $("#section2").hide();
+$("#section2").hide();
 $("#devbios").hide();
 
 // randomize hero backgrounds
