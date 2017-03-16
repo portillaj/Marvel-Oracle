@@ -1,6 +1,6 @@
 
 $( document ).ready(function() {
-  
+
 //variables for API and characters, and characterID  Q
 var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
 var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
@@ -14,9 +14,9 @@ var randomback = Math.floor((Math.random() * 8) + 1);
 console.log(randomback);
 
 // hide map
-// $("#map").hide();
-// $("#section2").hide();
-// $("#bio").hide();
+$("#map").hide();
+$("#section2").hide();
+$("#bio").hide();
 
 // randomize hero backgrounds
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
@@ -165,6 +165,7 @@ function MarvelCall()
 
 
 
+
 //Map stuff below.
 var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
 var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places";
@@ -197,7 +198,7 @@ function initMap() {
       };
 
       //Doing a text search of the places library. Still part of initMap.
-      var service = new google.maps.places.PlacesService(map);
+    var service = new google.maps.places.PlacesService(map);
       service.textSearch(request, callback);
             
     });
@@ -241,6 +242,8 @@ $("#top").click(function(e){
     e.preventDefault();
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, "slow");
 });
+
+
 
 
 });
