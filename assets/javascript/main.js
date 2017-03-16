@@ -74,7 +74,7 @@ if (annyang) {
 
     character = tag;
     CharHunt();
-    },
+    });
   };
 
   // Add our commands to annyang
@@ -142,7 +142,6 @@ function MarvelCall()
   var marvelAPI = "https://gateway.marvel.com/v1/public/characters/" + 
   charID + "?name=" + character + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
   "&hash=" + hash;
-
   //AJAX Call
   $.ajax  ({
      dataType: "json",
