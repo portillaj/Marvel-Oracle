@@ -1,5 +1,4 @@
 
-initMap();
 
   //firebase init
   var config = {
@@ -50,7 +49,8 @@ if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'show nearby comic shops': function()
-    { console.log("showing");
+    { console.log("showing MAP");
+    initMap();
     $("#map").show();
     $('body').delay(100) //wait .1 seconds
         .animate({ 'scrollTop': $('#map').offset().top
