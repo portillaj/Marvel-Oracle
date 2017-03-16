@@ -1,4 +1,17 @@
 
+//firebase init
+var config = {
+    apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
+    authDomain: "marvel-44df2.firebaseapp.com",
+    databaseURL: "https://marvel-44df2.firebaseio.com",
+    storageBucket: "marvel-44df2.appspot.com",
+    messagingSenderId: "160783325443"
+  };
+  firebase.initializeApp(config);
+
+
+
+
 $( document ).ready(function() {
 
 //variables for API and characters, and characterID  Q
@@ -8,17 +21,6 @@ var ts = new Date().getTime();
 var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
 var character;
 var charID;
-
-//firebase init
-  var config = {
-    apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
-    authDomain: "marvel-44df2.firebaseapp.com",
-    databaseURL: "https://marvel-44df2.firebaseio.com",
-    storageBucket: "marvel-44df2.appspot.com",
-    messagingSenderId: "160783325443"
-  };
-  firebase.initializeApp(config);
-
 
 
 //random background 
