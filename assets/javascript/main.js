@@ -176,7 +176,7 @@ function MarvelCall()
          // console.log(testing);
 
          //Taylor this is the part I am trying to get the three comic books to display
-         //for loop that will choose the first three comic books....
+         //for loop that will choose the first 4 comic books....
          var comicAPI = "https://gateway.marvel.com/v1/public/comics?dateDescriptor=thisWeek&dateRange=2010-01-01%2C2017-01-01&characters=" + charID + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + 
   		"&hash=" + hash;
 
@@ -208,83 +208,5 @@ function MarvelCall()
 
 
 //Map stuff below.
-var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
-var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places";
-
-//Set up map and tap the map div. Yes, it's a long function. It needs to stay
-//together because of reasons of scope and getting the markers to work 
-//properly.
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11
-      });
-
-  //HTML5 geolocation. Part of initMap
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      //Map center is the geolocation that just got found. Part of initMap.
-      map.setCenter(pos);
-
-      //Looking for all close stores that sell comics. Needs to be in initMap.
-      var request = {
-        location: pos,
-        radius: 50000,
-        query: "comic",
-        type: "store"
-      };
-
-      //Doing a text search of the places library. Still part of initMap.
-    var service = new google.maps.places.PlacesService(map);
-      service.textSearch(request, callback);
-            
-    });
-
-    //If the library is up, markers are created for local stores selling comics.
-    //Part of initMap.
-    function callback(results, status) {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-          createMarker(results[i]);
-        }
-      }
-    }
-
-    //Creating the markers, adding the info windows, and click listeners.
-    //Part of initMap.
-    function createMarker(place) {
-      var infoWindow = new google.maps.InfoWindow({
-        content: "<div class='text-center'>" + place.name + "<br>" + 
-        place.formatted_address + "</div>"
-      });
-      var placeLoc = place.geometry.location;
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-      marker.addListener("click", function(){
-        infoWindow.open(map, this);
-      });
-    }
-  }
-}; //This ends initMap.
-
-//Sets up map as soon as the page is loaded. Only one function to call.
-// $(document).ready(function(){
-//   initMap();
-// });
-initMap();
-
-$("#top").click(function(e){       
-    e.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top}, "slow");
-});
 
 
-
-
-});
