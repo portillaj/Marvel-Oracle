@@ -14,6 +14,7 @@ console.log(randomback);
 
 // hide map
 $("#map").hide();
+$("#section2").hide();
 
 // randomize hero backgrounds
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
@@ -74,7 +75,8 @@ if (annyang) {
 
 
 function scrolling() {
-     $('body').delay(100) //wait .1 seconds
+  $("#section2").show();
+  $('body').delay(100) //wait .1 seconds
         .animate({
             //animate jQuery's custom "scrollTop" style
             //grab the value as the offset of #second from the top of the page
