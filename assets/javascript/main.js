@@ -169,8 +169,7 @@ function MarvelCall()
 
          var descriptionText = $("<p>").addClass("desc-text");
          var comicDisplay;
-         // var testing = search.results[0].comics.items[0].resourceURI.getComics;
-         // console.log(testing);
+
 
          //Taylor this is the part I am trying to get the three comic books to display
          //for loop that will choose the first 4 comic books....
@@ -183,11 +182,8 @@ function MarvelCall()
 		     url: comicAPI
 		     }).done(function(response) {
          		for (var i = 0; i < 4; i++) {
-              console.log("Comics called...")
-         			console.log(response);
          			var search = response.data;
             		comicDisplay = $("<img>").addClass("comic-pic").attr("src", search.results[i].images[0].path + "." + search.results[i].images[0].extension);
-            
             		$(".comic-book-section").append(comicDisplay);
             	}
          });
