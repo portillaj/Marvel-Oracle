@@ -21,6 +21,8 @@ $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + r
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
+    'show nearby comic shops': function()
+    { console.log("showing");},
     'search *tag': function(tag) {
       console.log("Searching... " + tag);
     character = tag;
