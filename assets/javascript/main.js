@@ -71,9 +71,8 @@ if (annyang) {
     'search *tag': function(tag) {
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
-
-    character = tag;
-    CharHunt();
+      character = tag;
+      CharHunt();
     }
   };
 
@@ -90,7 +89,7 @@ function CharHunt()
     console.log("charHunt called success");
     var ts = new Date().getTime();
     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
-    var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+    var marvelAPI = "https://gateway.marvel.com/v1/public/characters?name=" + character + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
 
 
         $.ajax  ({
