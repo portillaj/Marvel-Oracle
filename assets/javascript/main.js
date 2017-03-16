@@ -165,7 +165,7 @@ function MarvelCall()
 		     dataType: "json",
 		     url: comicAPI
 		     }).done(function(response) {
-         		for (var i = 0; i < 3; i++) {
+         		for (var i = 0; i < 4; i++) {
               console.log("Comics called...")
          			console.log(response);
          			var search = response.data;
