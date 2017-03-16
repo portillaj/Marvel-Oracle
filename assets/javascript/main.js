@@ -123,8 +123,14 @@ function CharHunt()
  }
 
 
-// search click
+// search button click
 
+$(".text-button").on("click",function(e){
+     event.preventDefault(e);
+     console.log("button working");
+      character = $("#searchbox").val();
+      CharHunt();
+ });
 
 
 
