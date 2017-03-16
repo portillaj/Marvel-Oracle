@@ -121,6 +121,12 @@ font-family: 'Architects Daughter', cursive;
   color: white;
 }
 
+.name-header {
+  margin-top: 20px;
+  font-family: 'Unmasked BB';
+  src: url('assets/font/UnmaskedBB_bold.ttf');
+  color: white;
+}
 .comic-header {
   margin-top: 20px;
   font-family: 'Unmasked BB';
