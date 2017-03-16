@@ -73,8 +73,21 @@ if (annyang) {
       $("#searchbox").attr("placeholder", tag);
       character = tag;
       CharHunt();
+    },
+     'show me *tag': function(tag) {
+      console.log("Searching... " + tag);
+      $("#searchbox").attr("placeholder", tag);
+      character = tag;
+      CharHunt();
+    },
+     'lets see *tag': function(tag) {
+      console.log("Searching... " + tag);
+      $("#searchbox").attr("placeholder", tag);
+      character = tag;
+      CharHunt();
     }
-  };
+
+ };
 
   // Add our commands to annyang
   annyang.addCommands(commands);
