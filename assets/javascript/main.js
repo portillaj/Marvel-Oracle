@@ -123,6 +123,10 @@ function CharHunt()
  }
 
 
+// search click
+
+
+
 
 function scrolling() {
   $("#section2").show();
@@ -204,7 +208,7 @@ function MarvelCall()
 
 
 var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
-var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places";
+var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places&callback=initMap";
 
 //Set up map and tap the map div.
 function initMap() {
