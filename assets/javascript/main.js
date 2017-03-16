@@ -70,18 +70,6 @@ if (annyang) {
     'search *tag': function(tag) {
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
-      CharSearch(tag);
-    };
-
-  // Add our commands to annyang
-  annyang.addCommands(commands);
-
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
-}
-
-function CharSearch(tag)
-{
 
     character = tag;
     var ts = new Date().getTime();
@@ -107,8 +95,18 @@ function CharSearch(tag)
                  scrolling();
 
           });
-        }
+
+    }
+    
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
 }
+
 
 function scrolling() {
   $("#section2").show();
