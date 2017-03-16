@@ -97,13 +97,13 @@
 }
 
 #bio {
-  height: 700px;
+  height: 600px;
 }
 
 .form-control
 {
  font-family: 'Unmasked BB';
- src: url('assets/font/UnmaskedBB.ttf');
+ src: url('assets/font/UnmaskedBB_ital.ttf');
  font-size: 20px;
 
 }
@@ -111,7 +111,7 @@
 .desc-text {
   color: white;
   font-family: 'Unmasked BB';
-  src: url('assets/font/UnmaskedBB.ttf');
+  src: url('assets/font/UnmaskedBB_ital.ttf');
   font-size: 20px;
 }
 
