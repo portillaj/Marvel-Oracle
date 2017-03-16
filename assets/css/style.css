@@ -104,6 +104,7 @@
 {
  font-family: 'Unmasked BB';
  src: url('assets/font/UnmaskedBB_ital.ttf');
+ font-style: italic;
  font-size: 20px;
 
 }
@@ -111,6 +112,7 @@
 .desc-text {
   color: white;
   font-family: 'Unmasked BB';
+  font-style: italic;
   src: url('assets/font/UnmaskedBB_ital.ttf');
   font-size: 20px;
 }
