@@ -102,7 +102,7 @@
 
 .form-control
 {
- font-family: 'Unmasked BB';
+ font-family: 'Unmasked BB ital';
  src: url('assets/font/UnmaskedBB_ital.ttf');
  font-size: 20px;
 
@@ -110,7 +110,7 @@
 
 .desc-text {
   color: white;
-  font-family: 'Unmasked BB';
+  font-family: 'Unmasked BB ital';
   src: url('assets/font/UnmaskedBB_ital.ttf');
   font-size: 20px;
 }
