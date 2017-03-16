@@ -102,8 +102,8 @@
 
 .form-control
 {
- font-family: 'Unmasked BB';
- src: url('assets/font/UnmaskedBB_ital.ttf');
+ font-family: 'Mighty Zeo 2.0';
+ src: url('assets/font/MIGHZ.TTF');
  font-style: italic;
  font-size: 20px;
 
@@ -111,9 +111,9 @@
 
 .desc-text {
   color: white;
-  font-family: 'Unmasked BB';
   font-style: italic;
-  src: url('assets/font/UnmaskedBB_ital.ttf');
+  font-family: 'Mighty Zeo 2.0';
+  src: url('assets/font/MIGHZ.TTF');
   font-size: 20px;
 }
 
