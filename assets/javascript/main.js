@@ -8,7 +8,7 @@
     messagingSenderId: "160783325443"
   };
   firebase.initializeApp(config);
-
+  var database = firebase.database();
 
 
 
@@ -82,7 +82,7 @@ if (annyang) {
             charID = charobj.data.results[0].id;
             character = charobj.data.results[0].name;
             console.log(charID + " is the ID and name is: " + character);
-            
+
             database.ref().push({
               slot01: character,
               });
