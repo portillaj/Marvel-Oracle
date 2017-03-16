@@ -74,7 +74,7 @@ if (annyang) {
 
     character = tag;
     CharHunt();
-    
+    },
   };
 
   // Add our commands to annyang
