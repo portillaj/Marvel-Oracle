@@ -81,8 +81,8 @@ if (annyang) {
                  MarvelCall();
                  scrolling();
 
-                    database.ref().push({
-              slot[0]: character,
+            database.ref().push({
+              slot01: character,
               });
           });
 
