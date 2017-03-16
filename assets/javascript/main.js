@@ -12,9 +12,15 @@ var charID;
 var randomback = Math.floor((Math.random() * 8) + 1);
 console.log(randomback);
 
-// $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
+// hide map
+$("#map").hide();
 
+// randomize hero backgrounds
 $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
+
+
+
+
 
 // New voice powered search functions
 
@@ -22,7 +28,13 @@ if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'show nearby comic shops': function()
-    { console.log("showing");},
+    { console.log("showing");
+    $("#map").show();
+    $('body').delay(100) //wait .1 seconds
+        .animate({ 'scrollTop': $('#map').offset().top
+        }, 300); //animate over 800ms, change this to however long you want it to anim
+
+  },
     'search *tag': function(tag) {
       console.log("Searching... " + tag);
     character = tag;
@@ -62,12 +74,12 @@ if (annyang) {
 
 
 function scrolling() {
-     $('body').delay(500) //wait 2 seconds
+     $('body').delay(100) //wait .1 seconds
         .animate({
             //animate jQuery's custom "scrollTop" style
             //grab the value as the offset of #second from the top of the page
             'scrollTop': $('#section2').offset().top
-        }, 500); //animate over 800ms, change this to however long you want it to anim
+        }, 300); //animate over 800ms, change this to however long you want it to anim
 }//end function
 
 
