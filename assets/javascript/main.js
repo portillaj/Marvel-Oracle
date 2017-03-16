@@ -127,6 +127,7 @@ function MarvelCall()
 
          $(".bio-header-section").html(descriptionHeader);
          $(".comic-book-section").html(comicHeader);
+         $("#heroname").html(character);
 
          var descriptionText = $("<p>").addClass("desc-text");
          var comicDisplay;
