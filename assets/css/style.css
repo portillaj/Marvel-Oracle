@@ -100,11 +100,19 @@
   height: 700px;
 }
 
+.form-control
+{
+ font-family: 'Unmasked BB';
+ src: url('assets/font/UnmaskedBB.ttf');
+ font-size: 20px;
+
+}
+
 .desc-text {
   color: white;
-  font-family: 'Unmasked';
+  font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB.ttf');
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .desc-header {
