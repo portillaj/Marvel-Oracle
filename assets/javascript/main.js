@@ -1,5 +1,5 @@
 
-
+initMap();
 
   //firebase init
   var config = {
@@ -269,4 +269,4 @@ function initMap() {
 };
 
 //Sets up map as soon as the page is loaded.
-initMap();
+
