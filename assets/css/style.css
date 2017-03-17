@@ -500,6 +500,15 @@ input {
 }
 
 
+.gif img 
+{
+
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 564px) {
   .spidey {
     height: 550px;
