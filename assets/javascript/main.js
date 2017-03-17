@@ -69,24 +69,25 @@ if (annyang) {
       $("#searchbox").attr("placeholder", tag);
     $("#section2").show();
       character = tag;
-      CharHunt();
       scrolling();
+      CharHunt();
     },
      'show me *tag': function(tag) {
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
         $("#section2").show();
       character = tag;
-      CharHunt();
       scrolling();
+      CharHunt();
     },
      'lets see *tag': function(tag) {
       console.log("Searching... " + tag);
         $("#section2").show();
       $("#searchbox").attr("placeholder", tag);
       character = tag;
-      CharHunt();
       scrolling();
+      CharHunt();
+      
     }
 
  };
