@@ -52,9 +52,9 @@ $( document ).ready(function() {
             if (annyang) {
               // Let's define our first command. First the text we expect, and then the function it should call
               var commands = {
-                'show nearby': function() //use show nearby speech to show map
+               'show nearby': function() //use show nearby speech to show map
                 { console.log("showing MAP");
-                initMap();
+                // initMap();
                 $("#newmap").show();//when called, scroll to the map section
                 $('body').delay(300) //wait .1 seconds
                     .animate({ 'scrollTop': $('#map').offset().top
