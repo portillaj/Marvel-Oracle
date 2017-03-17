@@ -59,7 +59,7 @@ $( document ).ready(function() {
                 // initMap();
                 $("#newmap").show();//when called, scroll to the map section
                 $('body').delay(300) //wait .1 seconds
-                    .animate({ 'scrollTop': $('#map').offset().top
+                    .animate({ 'scrollTop': $('#newmap').offset().top
                     }, 1000); //animate over 800ms, change this to however long you want it to anim
 
               },
