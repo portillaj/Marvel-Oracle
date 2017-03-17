@@ -130,9 +130,9 @@ $( document ).ready(function() {
                       console.log(queryURL);
 
 
-                        for (var i = 0; i < 8; i++) 
+                        for (var i = 0; i < 12; i++) 
                         {
-                              $('#box'+ (i+1) ).html('<img src="' + response.data[i].images.downsized.url + ' " > <br> <h5> Rating: ' + response.data[i].rating + '</h5>');
+                              $('#box'+ (i+1) ).html('<img src="' + response.data[i].images.downsized.url + ' " >');
                               // $('#box'+ (i+1) ).val = response.data[i].images.downsized.url;
                                      $('#box'+ (i+1) ).attr("data-animate", response.data[i].images.downsized.url);
                                      $('#box'+ (i+1) ).attr("data-still", response.data[i].images.downsized_still.url);

@@ -26,6 +26,21 @@
   background-attachment: fixed;
 }
 
+.footage
+{
+ background-color: #c93a3a;
+   font-family: 'Architects Daughter', cursive;
+  color: blue;
+  font-size: 55px;
+}
+.gallery-title
+{
+  font-family: 'Architects Daughter', cursive;
+  color: black;
+  font-size: 25px;
+   background-color: #c93a3a;
+}
+
 .search-bar {
     position: absolute;
     left: 45%;
