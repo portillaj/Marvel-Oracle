@@ -27,7 +27,7 @@ var randomback = Math.floor((Math.random() * 8) + 1);
 
 // hide sections
 $("#map").hide();
-$("#section2").hide();
+//$("#section2").hide();
 $("#devbios").hide();
 
 // randomize hero backgrounds
@@ -135,6 +135,7 @@ $(".text-button").on("click",function(e){
      console.log("button working");
       character = $("#searchbox").val();
       CharHunt();
+      $("#searchbox").val("");
  });
 
 
@@ -202,18 +203,15 @@ function MarvelCall()
             		$(".comic-book-section").append(comicDisplay);
             	}
          });
-
-         descriptionText.html(search.results[0].description);//get the character description from api
-         $(".bio-description-section").html(descriptionText); //add the character description to the page
-         $(".form-control").val(""); //clear the search bar
+         if(search.results[0].description === ""){
+             $(".bio-description-section").addClass("coming-soon").html("Classified by Order of S.H.I.E.L.D.");
+         }else {
+          descriptionText.html(search.results[0].description);//get the character description from api
+          $(".bio-description-section").html(descriptionText); //add the character description to the page
+        }
     });//end done function
 
 };//end search
-
-
-
-
-
 
 //Map stuff below.
 

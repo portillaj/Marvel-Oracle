@@ -9,6 +9,11 @@
   margin-top: 0;
   height: 800px;
 }
+
+.coming-soon {
+  color: white;
+  font-size: 20px;
+}
 #main-section {
   background-image: url('../images/character-background2.jpg');
   background-size: cover;
@@ -65,11 +70,12 @@
 }
 
 .pic {
- height: 400px;
- width: 400px;
- border: 5px solid white;
+ height: 500px;
+ width: 500px;
+ border: 9px solid white;
  margin-left: 100px;
  margin-top: 100px;
+ border-radius: 10px;
 }
 
 .character-show {
@@ -85,11 +91,13 @@
 .comic-book-section {
   margin-top: 10px;
 }
+
 .hide-show {
+  margin-top: -20px;
   width: 100%;
 }
 #bio {
-  height: 900px;
+  height: 700px;
 }
 .form-control
 {
@@ -145,64 +153,12 @@ input {
   font-size: 55px;
 }
 .comic-header {
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
   color: black;
 }
-/* Shutter Out Horizontal */
-.hvr-shutter-out-horizontal {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  font-size: 20px;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  padding: 15px;
-  width: 300px;
-  border-radius: 10px;
-  font-weight: bold;
-  color: white;
-  background-color: #2E88A9;
-  font-family: 'Exo', sans-serif;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.hvr-shutter-out-horizontal:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #FF5268;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
-  color: white;
-  border-radius: 10px;
-}
-.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
+
 #map{
   height: 800px;
   width: 100%;
@@ -282,6 +238,7 @@ input {
     left: 33%;
     font-size: 24px;
   }
+
 }
 @media only screen and (max-width: 1200px) {
     .bio-img {
@@ -304,6 +261,18 @@ input {
     left: 33%;
     font-size: 24px;
   }
+
+  .pic {
+   height: 450px;
+   width: 400px;
+   border: 7px solid white;
+  }
+
+.comic-pic {
+  width: 100px;
+  height: 160px;
+  
+}
 }
 @media only screen and (max-width: 995px) {
   .logo {
@@ -339,7 +308,70 @@ input {
   color: #DB3D3F; 
   font-size: 14px;
 }
+
+.desc-text {
+  font-size: 16px;
 }
+
+ .pic {
+   height: 420px;
+   width: 330px;
+   border: 7px solid white;
+  }
+
+.comic-pic {
+  width: 90px;
+  height: 180px;
+}
+}
+
+@media only screen and (max-width: 870px) {
+  .desc-text {
+  font-size: 24px;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+#pic-area {
+  width: 100%;
+}
+
+#bio {
+  width: 100%;
+}
+
+ .pic {
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+   height: 500px;
+   width: 500px;
+   border: 7px solid white;
+
+  }
+
+  .bio-header-section {
+    margin-top: 20px;
+  }
+
+.comic-pic {
+  width: 130px;
+  height: 200px;
+  margin-left: 20px;
+}
+
+#bio {
+  text-align: center;
+}
+
+.desc-header, .comic-header {
+  color: #D7892A;
+  font-size: 30px; 
+}
+
+}
+
 @media only screen and (max-width: 765px) {
   .logo {
     top: 15%;
@@ -363,11 +395,6 @@ input {
     font-size: 20px;
     margin-left: 37px;
   }
-  .hvr-shutter-out-horizontal {
-    font-size: 15px;
-    margin-top: 5px;
-    padding: 10px;
-  }
     .bio-img {
     margin-top: 100px;
     width: 260px;
@@ -384,6 +411,46 @@ input {
   font-size: 20px;
   }
 }
+
+@media only screen and (max-width: 870px) {
+  .desc-text {
+  font-size: 24px;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+#pic-area {
+  width: 100%;
+}
+
+#bio {
+  width: 100%;
+}
+
+ .pic {
+   height: 500px;
+   width: 500px;
+  }
+
+.comic-pic {
+  width: 100px;
+  height: 170px;
+  margin-left: 20px;
+}
+
+#bio {
+  text-align: center;
+}
+
+.desc-header, .comic-header {
+  color: #D7892A;
+  font-size: 30px; 
+}
+
+}
+
+
 @media only screen and (max-width: 564px) {
   .spidey {
     height: 550px;
@@ -431,6 +498,48 @@ input {
   color: #DB3D3F; 
   font-size: 12px;
   }
+}
+
+@media only screen and (max-width: 545px) {
+  .desc-text {
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+#pic-area {
+  width: 100%;
+}
+
+#bio {
+  width: 100%;
+}
+
+ .pic {
+   height: 400px;
+   width: 400px;
+  }
+
+  .bio-header-section {
+    margin-top: 20px;
+  }
+
+.comic-pic {
+  width: 80px;
+  height: 140px;
+  margin-left: 10px;
+}
+
+#bio {
+  text-align: center;
+}
+
+.desc-header, .comic-header {
+  color: #D7892A;
+  font-size: 30px; 
+}
+
 }
 @media only screen and (max-width: 448px) {
   .spidey {
@@ -480,5 +589,27 @@ input {
   color: #DB3D3F; 
   font-size: 12px;
   }
+}
+
+@media only screen and (max-width: 440px) {
+  
+ .pic {
+  display: inline;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border: none;
+  margin-left: 60px;
+  }
+
+.comic-pic {
+  width: 60px;
+  height: 120px;
+}
+
+#heroname {
+  font-size: 55px;
+}
+
 }
   
