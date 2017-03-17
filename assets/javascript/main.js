@@ -156,8 +156,8 @@ function MarvelCall()
   console.log("MARVEL, CALLED!");
   scrolling();
 
-  $('.character-show').css('display', 'block');
-  //get the characterID from the character that the user entered
+  // $('.character-show').css('display', 'block');
+  // //get the characterID from the character that the user entered
 
 
   //marvelAPI URL
