@@ -1,4 +1,5 @@
 var music = new Audio('seventh.m4a');
+music.volume = .8;
 music.play();
   //firebase init
   var config = {
@@ -11,6 +12,8 @@ music.play();
   firebase.initializeApp(config);
 
   var database = firebase.database();
+
+  responsiveVoice.speak("Welcome to the Marvel Oracle. Tell me what you're looking for.", "US English Female", {rate: .95});
 
 
 //variables for API and characters, and characterID  Q
