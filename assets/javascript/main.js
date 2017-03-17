@@ -25,7 +25,7 @@ var charID;
 var randomback = Math.floor((Math.random() * 8) + 1);
 
 
-// hide map
+// hide sections
 $("#map").hide();
 $("#section2").hide();
 $("#devbios").hide();
@@ -70,6 +70,7 @@ if (annyang) {
     $("#section2").show();
       character = tag;
       CharHunt();
+      scrolling();
     },
      'show me *tag': function(tag) {
       console.log("Searching... " + tag);
@@ -77,6 +78,7 @@ if (annyang) {
         $("#section2").show();
       character = tag;
       CharHunt();
+      scrolling();
     },
      'lets see *tag': function(tag) {
       console.log("Searching... " + tag);
@@ -84,6 +86,7 @@ if (annyang) {
       $("#searchbox").attr("placeholder", tag);
       character = tag;
       CharHunt();
+      scrolling();
     }
 
  };
@@ -119,7 +122,6 @@ function CharHunt()
               slot01: character,
               });
                  MarvelCall();
-                 scrolling();
             });
 
  }
