@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
             var music = new Audio('seventh.m4a');
-            music.volume = .2;
+            music.volume = .17;
             music.play();
               //firebase init
               var config = {
@@ -76,7 +76,7 @@ $( document ).ready(function() {
                   scrolling();
                   CharHunt();
                 },
-                 'show me *tag': function(tag) { //use show me keyword + character
+                 'look up *tag': function(tag) { //use show me keyword + character
                   console.log("Searching... " + tag);
                   $("#searchbox").attr("placeholder", tag);
                     $("#section2").show();
@@ -108,8 +108,42 @@ $( document ).ready(function() {
                 'crank the music': function()
                 {
                  music.volume = .95;
-                }
+                },
+                'show in action':function()
+                {
+      // Calls the Giphy API when called
 
+                  var SearchTerm = character;
+                  console.log("gifs of character..." + SearchTerm)
+
+
+                  var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + SearchTerm + '&limit=12&api_key=dc6zaTOxFJmzC';
+
+
+                  $.ajax({
+                      url: queryURL,
+                      method: 'GET'
+                    }).done(function(response) {
+                      console.log(response);
+                     // console.log(response.images.url);
+                      console.log(response.data[0].images.fixed_height.url);
+                      console.log(queryURL);
+
+
+                        for (var i = 0; i < 8; i++) 
+                        {
+                              $('#box'+ (i+1) ).html('<img src="' + response.data[i].images.downsized.url + ' " > <br> <h5> Rating: ' + response.data[i].rating + '</h5>');
+                              // $('#box'+ (i+1) ).val = response.data[i].images.downsized.url;
+                                     $('#box'+ (i+1) ).attr("data-animate", response.data[i].images.downsized.url);
+                                     $('#box'+ (i+1) ).attr("data-still", response.data[i].images.downsized_still.url);
+                                     $('#box'+ (i+1) ).attr("rating", response.data[i].rating);
+                                     $('#box'+ (i+1) ).attr("data-state", "still");
+                                     console.log(response.data[i].rating);
+
+                              // console.log($('#box'+ (i+1)).val()); 
+                        }
+                    });
+                }
 
              };
 
