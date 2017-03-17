@@ -1,4 +1,3 @@
-    initMap();
 
   //firebase init
   var config = {
