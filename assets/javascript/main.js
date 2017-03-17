@@ -54,6 +54,8 @@ $( document ).ready(function() {
               var commands = {
                'show nearby': function() //use show nearby speech to show map
                 { console.log("showing MAP");
+                responsiveVoice.speak("Here are some nearby comic book stores", "US English Female", {rate: .95});
+
                 // initMap();
                 $("#newmap").show();//when called, scroll to the map section
                 $('body').delay(300) //wait .1 seconds
@@ -63,6 +65,8 @@ $( document ).ready(function() {
               },
                'who made this': function() //use who made this to show web dev team
                 { console.log("dev team reveal");
+                responsiveVoice.speak("Here is the brilliant team who created this.", "US English Female", {rate: .95});
+
                 $("#devbios").show(); //when called, show web dev team
                 $('body').delay(300) //wait .1 seconds
                     .animate({ 'scrollTop': $('#devbios').offset().top
@@ -110,10 +114,17 @@ $( document ).ready(function() {
                 {
                  music.volume = .95;
                 },
-                'show in action':function()
+                'show footage': function()
                 {
-      // Calls the Giphy API when called
-                 $("#footage").show();
+                  giphy();
+                }
+
+             };
+
+
+            function giphy() {
+            // Calls the Giphy API when called
+                   $("#footage").show();
                    $('body').delay(300) //wait .1 seconds
                     .animate({ 'scrollTop': $('#footage').offset().top
                     }, 1000); 
@@ -150,7 +161,6 @@ $( document ).ready(function() {
                     });
                 }
 
-             };
 
               // Add our commands to annyang
               annyang.addCommands(commands);
