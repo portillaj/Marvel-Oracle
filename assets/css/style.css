@@ -63,19 +63,15 @@
   margin-right: -250px;
   margin-left: -250px;
 }
-#pic-area {
-  border: 5px solid white;
-  border-radius: 10px;
-  width: 400px;
-  height: 450px;
-  margin-left: 100px;
-}
+
 .pic {
-  height: 400px;
-  width: 350px;
-  margin-left: 100px;
-  margin-top: 100px;
+ height: 400px;
+ width: 400px;
+ border: 5px solid white;
+ margin-left: 100px;
+ margin-top: 100px;
 }
+
 .character-show {
   height: 700px;
 }
