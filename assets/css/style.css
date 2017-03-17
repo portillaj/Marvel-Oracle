@@ -2,10 +2,9 @@
   box-sizing: border-box;
 }
 .container-fluid {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
-
 .character-show {
   margin-top: 0;
   height: 800px;
@@ -14,30 +13,26 @@
   background-image: url('../images/character-background2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-	margin-top: 0;
-	position: relative;
-	background-attachment: fixed;
+    margin-top: 0;
+    position: relative;
+    background-attachment: fixed;
 }
-
 .search-bar {
-	position: absolute;
-	left: 45%;
-	top: 63%;
-	width: 400px;
+    position: absolute;
+    left: 45%;
+    top: 63%;
+    width: 400px;
   margin-right: -400px;
   margin-left: -137px;
 }
-
 .label {
-	font-size: 24px;
-	margin-left: 65px;
-	font-family: 'Exo', sans-serif;
+    font-size: 24px;
+    margin-left: 65px;
+    font-family: 'Exo', sans-serif;
 }
-
 .header {
-	position: relative;
+    position: relative;
 }
-
 .mic {
   position: absolute;
   top: 45%;
@@ -47,39 +42,43 @@
   margin-right: -100px;
   margin-left: -100px;
 }
-
 .spidey {
-	width: 100%;
-/*	height: 680px;*/
+    width: 100%;
+    height: 780px;
 }
-
 .herohead {
   width: 100%;
-/*  height: 680px;*/
+  height: 780px;
 }
-
-
+#recent {
+  color: #D0D0D0;
+}
+#recent h4 {
+  color: ;
+}
 .logo {
-	position: absolute;
-	left:50%;
-	top: 10%;
+    position: absolute;
+    left:50%;
+    top: 20%;
   margin-right: -250px;
   margin-left: -250px;
-
 }
-
+#pic-area {
+  border: 5px solid white;
+  border-radius: 10px;
+  width: 400px;
+  height: 450px;
+  margin-left: 100px;
+}
 .pic {
   height: 400px;
-  width: 400px;
-  border: 5px solid white;
+  width: 350px;
   margin-left: 100px;
   margin-top: 100px;
 }
-
 .character-show {
   height: 700px;
 }
-
 .comic-pic {
   width: 120px;
   height: 180px;
@@ -87,46 +86,62 @@
   margin-right: 15px;
   border: 5px solid white;
 }
-
 .comic-book-section {
   margin-top: 10px;
 }
-
 .hide-show {
   width: 100%;
 }
-
 #bio {
   height: 900px;
 }
-
 .form-control
 {
 font-family: 'Architects Daughter', cursive;
-
 */ font-size: 20px;
-
 }
-
+.wrapper {
+   border:1px solid #000;
+   display:inline-block;
+   position:relative;
+   width: 450px;
+}
+input,
+.text-button {
+   background-color:transparent;
+   border:0;
+}
+.text-button {
+   position:absolute;
+   right:0;
+   top:0;
+   width: 70px;
+   height: 34px;
+   border: 2px solid #cccccc ;
+   border-radius: 5px;
+   background-color: #c93a3a;
+   color: white;
+   
+}
+input {
+   padding-right:30px; /* button padding */
+}
 .desc-text {
   color: white;
   font-family: 'Architects Daughter', cursive;
   font-size: 20px;
 }
-
 .desc-searches {
   color: gray;
   font-family: 'Architects Daughter', cursive;
   font-size: 12px;
 }
-
 .desc-header {
   margin-top: 100px;
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
   color: black;
 }
-
 .name-header {
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
@@ -141,11 +156,11 @@ font-family: 'Architects Daughter', cursive;
 }
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal {
-	margin-top: 20px;
-	display: block;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   font-size: 20px;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -192,7 +207,6 @@ font-family: 'Architects Daughter', cursive;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
 #map{
   height: 500px;
   width: 100%;
@@ -203,21 +217,18 @@ font-family: 'Architects Daughter', cursive;
   background-image: url('../images/bio-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 .bio-section {
   height: 700px;
   margin-left: 20px;
   text-align: center;
 }
-
 .bio-header {
   margin-top: 100px;
   font-family: 'Acme', sans-serif;
   color: white;
   font-size: 40px;
 }
-
 .bio-img {
   margin-top: 100px;
   width: 250px;
@@ -225,7 +236,6 @@ font-family: 'Architects Daughter', cursive;
   border: 5px solid white;
   border-radius: 50%;
 }
-
 .bio-modal {
   width: 200px;
   height: 200px;
@@ -235,7 +245,6 @@ font-family: 'Architects Daughter', cursive;
   margin-right: 10px;
   margin-top: 15px;
 }
-
 .bio-text {
   margin-top: 10px;
   margin-left: 10px;
@@ -253,7 +262,6 @@ font-family: 'Architects Daughter', cursive;
   box-shadow: 0 3px 0 #ccc, 3px 5px 3px red;
   -o-box-shadow: 0 3px 0 #ccc, 3px 5px 3px red;
 }
-
 .name {
   color: white;
 }
@@ -261,37 +269,62 @@ font-family: 'Architects Daughter', cursive;
   font-style: italic;
   color: #DB3D3F;
 }
-
-
-
 /*******MEDIA QUERIES*********/
-@media only screen and (max-width: 1100px) {
+@media only screen and (min-width: 1200px) {
+   .logo {
+    width: 450px;
+    height: 200px;
+    left: 54%;
+  }
+  .search-bar {
+    top: 50%;
+    left: 47%;
+  }
+  #recent {
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 1200px) {
     .bio-img {
     margin-top: 100px;
     width: 200px;
     height: 200px;
   }
-}
-
-@media only screen and (max-width: 995px) {
-
-  .logo {
-    width: 400px;
-    height: 100px;
+   .logo {
+    width: 450px;
+    height: 200px;
     left: 56%;
   }
-
+  .search-bar {
+    top: 50%;
+    left: 47%;
+  }
+  #recent {
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 995px) {
+  .logo {
+    width: 450px;
+    height: 200px;
+    left: 56%;
+  }
   .mic {
     width: 90px;
     height: 90px;
     left: 57%;
   }
-
   .search-bar {
     width: 380px;
     height: 117px;
+    left: 43%;
   }
-
   .label {
     margin-left: 55px;
   }
@@ -309,37 +342,31 @@ font-family: 'Architects Daughter', cursive;
   font-style: italic;
   color: #DB3D3F; 
   font-size: 14px;
-
 }
 }
-
 @media only screen and (max-width: 765px) {
-
   .logo {
-    width: 300px;
-    height: 80px;
-    left: 65%;
+    top: 15%;
+    width: 450px;
+    height: 250px;
+    left: 59%;
   }
-
   .mic {
     width: 70px;
     height: 70px;
     left: 60%;
     top: 38%;
   }
-
-  .search-bar {
-    width: 300px;
-    height: 100px;
-    left: 50%;
-    top: 35%;
+  #recent {
+    font-size: 20px;
   }
-
+  .search-bar {
+    top: 50%;
+  }
   .label {
     font-size: 20px;
     margin-left: 37px;
   }
-
   .hvr-shutter-out-horizontal {
     font-size: 15px;
     margin-top: 5px;
@@ -359,27 +386,84 @@ font-family: 'Architects Daughter', cursive;
   font-style: italic;
   color: #DB3D3F; 
   font-size: 20px;
-
   }
 }
-
-
-
-@media only screen and (max-width: 554px) {
+@media only screen and (max-width: 564px) {
   .spidey {
-    height: 350px;
+    height: 550px;
   }
   .logo {
-    left: 74%;
-    top: 0;
+    width: 300px;
+    height: 200px;
+    left: 70%;
+    top: 15%;
   }
-
   .mic {
     left: 65%;
     top: 30%;
   }
   .search-bar {
-    left: 51%;
+    left: 50%;
+    top: 42%;
+  }
+  .wrapper {
+    width: 320px;
+  }
+    .bio-img {
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+    margin-left: -17px;
+  }
+  #recent {
+    left: 20%;
+    font-size: 15px;
+  }
+  .bio-header {
+    font-size: 24px;
+  }
+  .name {
+    color: white;
+    font-size: 14px;
+  }
+   #searchbox {
+    font-size: 11px;
+  }
+.title {
+  font-style: italic;
+  color: #DB3D3F; 
+  font-size: 12px;
+  }
+}
+@media only screen and (max-width: 448px) {
+  .spidey {
+    min-height: 550px;
+  }
+  .logo {
+    left: 74%;
+    top: 10%;
+  }
+  .mic {
+    left: 65%;
+    top: 30%;
+  }
+  .search-bar {
+    left: 49%;
+    top: 48%;
+   
+  }
+  #heroholder {
+    height: 80%;
+  }
+  #recent {
+    font-size: 18px;
+  }
+  .wrapper {
+    width: 300px;
+  }
+  #searchbox {
+    font-size: 11px;
   }
     .bio-img {
     margin-top: 30px;
@@ -401,39 +485,4 @@ font-family: 'Architects Daughter', cursive;
   font-size: 12px;
   }
 }
-
   
-
-
-
-.wrapper {
-   border:1px solid #000;
-   display:inline-block;
-   position:relative;
-   width: 450px;
-}
-
-input,
-.text-button {
-   background-color:transparent;
-   border:0;
-}
-
-.text-button {
-   position:absolute;
-   right:0;
-   top:0;
-   width: 70px;
-   height: 34px;
-   border: 2px solid #cccccc ;
-   
-}
-
-input {
-   padding-right:30px; /* button padding */
-}
-
-
-
-
-
