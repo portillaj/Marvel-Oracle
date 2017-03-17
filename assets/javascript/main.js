@@ -1,5 +1,5 @@
 var music = new Audio('seventh.m4a');
-music.volume = .5;
+music.volume = .3;
 music.play();
   //firebase init
   var config = {
