@@ -76,7 +76,10 @@ $( document ).ready(function() {
                 'search *tag': function(tag) { //use search keyword + character
                   console.log("Searching... " + tag);
                   $("#searchbox").attr("placeholder", tag);
-                $("#section2").show();
+                  $("#section2").show();
+                  $("#newmap").hide(); 
+                  $("#devbios").hide();
+                  $("#footage").hide();
                   character = tag;
                   scrolling();
                   CharHunt();
@@ -86,6 +89,9 @@ $( document ).ready(function() {
                   console.log("Searching... " + tag);
                   $("#searchbox").attr("placeholder", tag);
                     $("#section2").show();
+                     $("#newmap").hide(); 
+                    $("#devbios").hide();
+                    $("#footage").hide();
                   character = tag;
                   scrolling();
                   CharHunt();
@@ -94,13 +100,20 @@ $( document ).ready(function() {
                   console.log("Searching... " + tag);
                   $("#searchbox").attr("placeholder", tag);
                     $("#section2").show();
+                    $("#newmap").hide(); 
+                    $("#devbios").hide();
+                    $("#footage").hide();
                   character = tag;
                   scrolling();
                   CharHunt();
+
                 },
                  'lets see *tag': function(tag) { //use lets see keyword + character
                   console.log("Searching... " + tag);
                     $("#section2").show();
+                    $("#newmap").hide(); 
+                    $("#devbios").hide();
+                    $("#footage").hide();
                   $("#searchbox").attr("placeholder", tag);
                   character = tag;
                   scrolling();
@@ -119,7 +132,7 @@ $( document ).ready(function() {
                 {
                  music.volume = .1;
                 },
-                'crank the music': function()
+                'crank music': function()
                 {
                  music.volume = .95;
                 },
