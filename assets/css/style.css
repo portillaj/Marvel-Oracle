@@ -1,10 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
 .container-fluid {
     padding: 0;
     margin: 0;
 }
+
 .character-show {
   margin-top: 0;
   height: 800px;
@@ -14,14 +16,16 @@
   color: white;
   font-size: 20px;
 }
+
 #main-section {
   background-image: url('../images/character-background2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-    margin-top: 0;
-    position: relative;
-    background-attachment: fixed;
+  margin-top: 0;
+  position: relative;
+  background-attachment: fixed;
 }
+
 .search-bar {
     position: absolute;
     left: 45%;
@@ -30,14 +34,17 @@
   margin-right: -400px;
   margin-left: -137px;
 }
+
 .label {
     font-size: 24px;
     margin-left: 65px;
     font-family: 'Exo', sans-serif;
 }
+
 .header {
     position: relative;
 }
+
 .mic {
   position: absolute;
   top: 45%;
@@ -47,20 +54,25 @@
   margin-right: -100px;
   margin-left: -100px;
 }
+
 .spidey {
     width: 100%;
     height: 780px;
 }
+
 .herohead {
   width: 100%;
   height: 780px;
 }
+
 #recent {
   color: #D0D0D0;
 }
+
 #recent h4 {
   color: ;
 }
+
 .logo {
     position: absolute;
     left:50%;
@@ -81,6 +93,7 @@
 .character-show {
   height: 700px;
 }
+
 .comic-pic {
   width: 120px;
   height: 180px;
@@ -88,6 +101,7 @@
   margin-right: 15px;
   border: 5px solid white;
 }
+
 .comic-book-section {
   margin-top: 10px;
 }
@@ -96,25 +110,30 @@
   margin-top: -20px;
   width: 100%;
 }
+
 #bio {
   height: 700px;
 }
+
 .form-control
 {
-font-family: 'Architects Daughter', cursive;
-*/ font-size: 20px;
+  font-family: 'Architects Daughter', cursive;
+  */ font-size: 20px;
 }
+
 .wrapper {
    border:1px solid #000;
    display:inline-block;
    position:relative;
    width: 450px;
 }
+
 input,
 .text-button {
    background-color:transparent;
    border:0;
 }
+
 .text-button {
    position:absolute;
    right:0;
@@ -124,39 +143,60 @@ input,
    border: 2px solid #cccccc ;
    border-radius: 5px;
    background-color: #c93a3a;
-   color: white;
-   
+   color: white;   
 }
+
 input {
    padding-right:30px; /* button padding */
 }
+
 .desc-text {
   color: white;
   font-family: 'Architects Daughter', cursive;
   font-size: 20px;
 }
+
 .desc-searches {
   color: gray;
   font-family: 'Architects Daughter', cursive;
   font-size: 12px;
 }
+
 .desc-header {
   margin-top: 100px;
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
   color: black;
 }
+
 .name-header {
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
   color: white;
   font-size: 55px;
 }
+
 .comic-header {
   margin-top: 40px;
   font-family: 'Unmasked BB';
   src: url('assets/font/UnmaskedBB_bold.ttf');
   color: black;
+}
+
+.comic-button {
+  display: block;
+  padding: 10px;
+  color: #c93a3a;
+  font-family: 'Architects Daughter', cursive;
+  background-color: white;
+  border-radius: 7px;
+  margin-top: 15px;
+}
+
+.comic-button:hover {
+  color: #c93a3a;
+  background-color: white;
+  transition-duration: 0.4s; 
 }
 
 #map{
@@ -170,17 +210,20 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .bio-section {
   height: 700px;
   margin-left: 20px;
   text-align: center;
 }
+
 .bio-header {
   margin-top: 100px;
   font-family: 'Acme', sans-serif;
   color: white;
   font-size: 40px;
 }
+
 .bio-img {
   margin-top: 100px;
   width: 250px;
@@ -188,6 +231,7 @@ input {
   border: 5px solid white;
   border-radius: 50%;
 }
+
 .bio-modal {
   width: 200px;
   height: 200px;
@@ -197,6 +241,7 @@ input {
   margin-right: 10px;
   margin-top: 15px;
 }
+
 .bio-text {
   margin-top: 10px;
   margin-left: 10px;
@@ -205,6 +250,7 @@ input {
   text-align: justify;
   margin-right: 10px;
 }
+
 .bio-section img:hover{ 
   background-color:#f2f2f2; 
   color:#336699 !important; 
@@ -214,13 +260,16 @@ input {
   box-shadow: 0 3px 0 #ccc, 3px 5px 3px red;
   -o-box-shadow: 0 3px 0 #ccc, 3px 5px 3px red;
 }
+
 .name {
   color: white;
 }
+
 .title {
   font-style: italic;
   color: #DB3D3F;
 }
+
 /*******MEDIA QUERIES*********/
 @media only screen and (min-width: 1200px) {
    .logo {

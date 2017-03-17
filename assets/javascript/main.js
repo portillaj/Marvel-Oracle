@@ -1,4 +1,5 @@
-
+var music = new Audio('seventh.m4a');
+music.play();
   //firebase init
   var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
@@ -37,34 +38,31 @@ $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + r
           
              $("#recent").append("<div><center>" + childSnapshot.val().slot01 + "</center></div>");
                  console.log(childSnapshot.val().slot01);
-
-          });
-
-
+  });
 
 // New voice powered search functions
 
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'show nearby': function()
+    'show nearby': function() //use show nearby speech to show map
     { console.log("showing MAP");
     initMap();
-    $("#map").show();
+    $("#map").show();//when called, scroll to the map section
     $('body').delay(300) //wait .1 seconds
         .animate({ 'scrollTop': $('#map').offset().top
         }, 1000); //animate over 800ms, change this to however long you want it to anim
 
   },
-   'who made this': function()
+   'who made this': function() //use who made this to show web dev team
     { console.log("dev team reveal");
-    $("#devbios").show();
+    $("#devbios").show(); //when called, show web dev team
     $('body').delay(300) //wait .1 seconds
         .animate({ 'scrollTop': $('#devbios').offset().top
         }, 1000); //animate over 800ms, change this to however long you want it to anim
 
   },
-    'search *tag': function(tag) {
+    'search *tag': function(tag) { //use search keyword + character
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
     $("#section2").show();
@@ -72,7 +70,7 @@ if (annyang) {
       scrolling();
       CharHunt();
     },
-     'show me *tag': function(tag) {
+     'show me *tag': function(tag) { //use show me keyword + character
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
         $("#section2").show();
@@ -80,7 +78,7 @@ if (annyang) {
       scrolling();
       CharHunt();
     },
-     'lets see *tag': function(tag) {
+     'lets see *tag': function(tag) { //use lets see keyword + character
       console.log("Searching... " + tag);
         $("#section2").show();
       $("#searchbox").attr("placeholder", tag);
