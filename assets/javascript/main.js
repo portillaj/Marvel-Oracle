@@ -57,7 +57,7 @@ if (annyang) {
         }, 000); //animate over 800ms, change this to however long you want it to anim
 
   },
-      'who made this': function()
+   'who made this': function()
     { console.log("dev team reveal");
     $("#devbios").show();
     $('body').delay(100) //wait .1 seconds
