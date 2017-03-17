@@ -36,6 +36,7 @@ $( document ).ready(function() {
             $("#map").hide();
             $("#section2").hide();
             $("#devbios").hide();
+            $("#footage").hide();
 
             // randomize hero backgrounds
             $("#heroholder").html('<img class="spidey" src="assets/images/marvel-jumbo0' + randomback + '.jpg">');
@@ -112,6 +113,10 @@ $( document ).ready(function() {
                 'show in action':function()
                 {
       // Calls the Giphy API when called
+                 $("#footage").show();
+                   $('body').delay(300) //wait .1 seconds
+                    .animate({ 'scrollTop': $('#footage').offset().top
+                    }, 1000); 
 
                   var SearchTerm = character;
                   console.log("gifs of character..." + SearchTerm)
