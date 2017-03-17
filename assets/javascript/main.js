@@ -27,7 +27,7 @@ var randomback = Math.floor((Math.random() * 8) + 1);
 
 // hide sections
 $("#map").hide();
-//$("#section2").hide();
+$("#section2").hide();
 $("#devbios").hide();
 
 // randomize hero backgrounds
@@ -156,10 +156,6 @@ function MarvelCall()
   //get character from what user entered
   console.log("MARVEL, CALLED!");
   scrolling();
-
-  // $('.character-show').css('display', 'block');
-  // //get the characterID from the character that the user entered
-
 
   //marvelAPI URL
   var marvelAPI = "https://gateway.marvel.com/v1/public/characters/" + 
