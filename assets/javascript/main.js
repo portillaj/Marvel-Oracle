@@ -53,7 +53,7 @@ if (annyang) {
     $("#map").show();
     $('body').delay(300) //wait .1 seconds
         .animate({ 'scrollTop': $('#map').offset().top
-        }, 300); //animate over 800ms, change this to however long you want it to anim
+        }, 1000); //animate over 800ms, change this to however long you want it to anim
 
   },
    'who made this': function()
@@ -61,7 +61,7 @@ if (annyang) {
     $("#devbios").show();
     $('body').delay(300) //wait .1 seconds
         .animate({ 'scrollTop': $('#devbios').offset().top
-        }, 300); //animate over 800ms, change this to however long you want it to anim
+        }, 1000); //animate over 800ms, change this to however long you want it to anim
 
   },
     'search *tag': function(tag) {
@@ -135,7 +135,7 @@ $(".text-button").on("click",function(e){
 
 function scrolling() {
   $("#section2").show();
-  $('body').delay(100) //wait .1 seconds
+  $('body').delay(000) //wait .1 seconds
         .animate({
             //animate jQuery's custom "scrollTop" style
             //grab the value as the offset of #second from the top of the page
