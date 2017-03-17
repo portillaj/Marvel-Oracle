@@ -136,12 +136,12 @@ $(".text-button").on("click",function(e){
 
 function scrolling() {
   $("#section2").show();
-  $('body').delay(000) //wait .1 seconds
+  $('body').delay(100) //wait .1 seconds
         .animate({
             //animate jQuery's custom "scrollTop" style
             //grab the value as the offset of #second from the top of the page
             'scrollTop': $('#section2').offset().top
-        }, 000); //animate over 800ms, change this to however long you want it to anim
+        }, 100); //animate over 800ms, change this to however long you want it to anim
 }//end function
 
 
