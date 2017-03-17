@@ -140,7 +140,7 @@ function scrolling() {
             //animate jQuery's custom "scrollTop" style
             //grab the value as the offset of #second from the top of the page
             'scrollTop': $('#section2').offset().top
-        }, 100); //animate over 800ms, change this to however long you want it to anim
+        }, 500); //animate over 800ms, change this to however long you want it to anim
 }//end function
 
 
