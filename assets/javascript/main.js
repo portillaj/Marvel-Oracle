@@ -67,17 +67,20 @@ if (annyang) {
     'search *tag': function(tag) {
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
+    $("#section2").show();
       character = tag;
       CharHunt();
     },
      'show me *tag': function(tag) {
       console.log("Searching... " + tag);
       $("#searchbox").attr("placeholder", tag);
+        $("#section2").show();
       character = tag;
       CharHunt();
     },
      'lets see *tag': function(tag) {
       console.log("Searching... " + tag);
+        $("#section2").show();
       $("#searchbox").attr("placeholder", tag);
       character = tag;
       CharHunt();
@@ -135,7 +138,7 @@ $(".text-button").on("click",function(e){
 
 function scrolling() {
   $("#section2").show();
-  $('body').delay(000) //wait .1 seconds
+  $('body').delay(100) //wait .1 seconds
         .animate({
             //animate jQuery's custom "scrollTop" style
             //grab the value as the offset of #second from the top of the page
