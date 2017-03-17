@@ -96,6 +96,10 @@ $( document ).ready(function() {
                 'kill music': function()
                 {
                  music.pause();
+                },
+                'restart music': function()
+                {
+                 music.start();
                 }
 
              };
