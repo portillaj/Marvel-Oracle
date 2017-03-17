@@ -33,7 +33,7 @@ $( document ).ready(function() {
 
 
             // hide sections
-            $("#map").hide();
+            $("#newmap").hide();
             $("#section2").hide();
             $("#devbios").hide();
             $("#footage").hide();
@@ -55,7 +55,7 @@ $( document ).ready(function() {
                 'show nearby': function() //use show nearby speech to show map
                 { console.log("showing MAP");
                 initMap();
-                $("#map").show();//when called, scroll to the map section
+                $("#newmap").show();//when called, scroll to the map section
                 $('body').delay(300) //wait .1 seconds
                     .animate({ 'scrollTop': $('#map').offset().top
                     }, 1000); //animate over 800ms, change this to however long you want it to anim
@@ -282,66 +282,66 @@ $( document ).ready(function() {
             //Map stuff below.
 
 
-            var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
-            var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places&callback=initMap";
+            // var mapKey = "AIzaSyA-YESMuTF_QIWim5QKpFwcrSm0uc-Bq5s";
+            // var mapURL = "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&libraries=places&callback=initMap";
 
-            //Set up map and tap the map div.
-            function initMap() {
-             var map = new google.maps.Map(document.getElementById('map'), {
-                   zoom: 11
-                 });
+            // //Set up map and tap the map div.
+            // function initMap() {
+            //  var map = new google.maps.Map(document.getElementById('map'), {
+            //        zoom: 11
+            //      });
 
-             //HTML5 geolocation.
-             if (navigator.geolocation) {
-               navigator.geolocation.getCurrentPosition(function(position) {
-                 var pos = {
-                   lat: position.coords.latitude,
-                   lng: position.coords.longitude
-                 };
+            //  //HTML5 geolocation.
+            //  if (navigator.geolocation) {
+            //    navigator.geolocation.getCurrentPosition(function(position) {
+            //      var pos = {
+            //        lat: position.coords.latitude,
+            //        lng: position.coords.longitude
+            //      };
 
-                 //Map center is the geolocation that just got found.
-                 map.setCenter(pos);
+            //      //Map center is the geolocation that just got found.
+            //      map.setCenter(pos);
 
-                 //Looking for all close stores that sell comics.
-                 var request = {
-                   location: pos,
-                   radius: 50000,
-                   query: "comic",
-                   type: "store"
-                 };
+            //      //Looking for all close stores that sell comics.
+            //      var request = {
+            //        location: pos,
+            //        radius: 50000,
+            //        query: "comic",
+            //        type: "store"
+            //      };
 
-                 //Doing a text search of the places library.
-                 var service = new google.maps.places.PlacesService(map);
-                 service.textSearch(request, callback);
+            //      //Doing a text search of the places library.
+            //      var service = new google.maps.places.PlacesService(map);
+            //      service.textSearch(request, callback);
                        
-               });
+            //    });
 
-               //If the library is up, markers are created for local stores selling comics.
-               function callback(results, status) {
-                 if (status === google.maps.places.PlacesServiceStatus.OK) {
-                   for (var i = 0; i < results.length; i++) {
-                     createMarker(results[i]);
-                   }
-                 }
-               }
+            //    //If the library is up, markers are created for local stores selling comics.
+            //    function callback(results, status) {
+            //      if (status === google.maps.places.PlacesServiceStatus.OK) {
+            //        for (var i = 0; i < results.length; i++) {
+            //          createMarker(results[i]);
+            //        }
+            //      }
+            //    }
 
-               //Creating the markers, adding the info windows, and click listeners.
-               function createMarker(place) {
-                 var infoWindow = new google.maps.InfoWindow({
-                   content: "<div class='text-center'>" + place.name + "<br>" +
-                   place.formatted_address + "</div>"
-                 });
-                 var placeLoc = place.geometry.location;
-                 var marker = new google.maps.Marker({
-                   map: map,
-                   position: place.geometry.location
-                 });
-                 marker.addListener("click", function(){
-                   infoWindow.open(map, this);
-                 });
-               }
-             }
-            };
+            //    //Creating the markers, adding the info windows, and click listeners.
+            //    function createMarker(place) {
+            //      var infoWindow = new google.maps.InfoWindow({
+            //        content: "<div class='text-center'>" + place.name + "<br>" +
+            //        place.formatted_address + "</div>"
+            //      });
+            //      var placeLoc = place.geometry.location;
+            //      var marker = new google.maps.Marker({
+            //        map: map,
+            //        position: place.geometry.location
+            //      });
+            //      marker.addListener("click", function(){
+            //        infoWindow.open(map, this);
+            //      });
+            //    }
+            //  }
+            // };
 
 //Sets up map as soon as the page is loaded.
 
