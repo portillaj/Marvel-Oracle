@@ -1,5 +1,5 @@
-var music = new Audio('seventh.m4a');
-music.play();
+// var music = new Audio('seventh.m4a');
+// music.play();
   //firebase init
   var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
