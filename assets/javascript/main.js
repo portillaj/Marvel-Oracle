@@ -92,6 +92,10 @@ $( document ).ready(function() {
                   scrolling();
                   CharHunt();
                   
+                },
+                'kill music': function()
+                {
+                 music.stop();
                 }
 
              };
