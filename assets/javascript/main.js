@@ -1,4 +1,4 @@
-
+    initMap();
 
   //firebase init
   var config = {
@@ -52,17 +52,17 @@ if (annyang) {
     { console.log("showing MAP");
     initMap();
     $("#map").show();
-    $('body').delay(100) //wait .1 seconds
+    $('body').delay(300) //wait .1 seconds
         .animate({ 'scrollTop': $('#map').offset().top
-        }, 000); //animate over 800ms, change this to however long you want it to anim
+        }, 300); //animate over 800ms, change this to however long you want it to anim
 
   },
    'who made this': function()
     { console.log("dev team reveal");
     $("#devbios").show();
-    $('body').delay(100) //wait .1 seconds
+    $('body').delay(300) //wait .1 seconds
         .animate({ 'scrollTop': $('#devbios').offset().top
-        }, 000); //animate over 800ms, change this to however long you want it to anim
+        }, 300); //animate over 800ms, change this to however long you want it to anim
 
   },
     'search *tag': function(tag) {
