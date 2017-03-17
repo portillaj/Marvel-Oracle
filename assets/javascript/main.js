@@ -206,6 +206,8 @@ $( document ).ready(function() {
                      });
                      if(search.results[0].description === ""){
                          $(".bio-description-section").addClass("coming-soon").html("Classified by Order of S.H.I.E.L.D.");
+                      responsiveVoice.speak(character, "US English Female", {rate: .95});
+                      responsiveVoice.speak("Classified by Order of Shield", "US English Female", {rate: .95});
                      }else {
                       descriptionText.html(search.results[0].description);//get the character description from api
                       $(".bio-description-section").html(descriptionText); //add the character description to the page
