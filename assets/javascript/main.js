@@ -81,7 +81,16 @@ $( document ).ready(function() {
                   scrolling();
                   CharHunt();
                 },
-                 'look up *tag': function(tag) { //use show me keyword + character
+
+                 'show me *tag': function(tag) { //use show me keyword + character
+                  console.log("Searching... " + tag);
+                  $("#searchbox").attr("placeholder", tag);
+                    $("#section2").show();
+                  character = tag;
+                  scrolling();
+                  CharHunt();
+                },
+                 'look up *tag': function(tag) { //use look up keyword + character
                   console.log("Searching... " + tag);
                   $("#searchbox").attr("placeholder", tag);
                     $("#section2").show();
