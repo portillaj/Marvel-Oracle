@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
             var music = new Audio('seventh.m4a');
-            music.volume = .3;
+            music.volume = .1;
             music.play();
               //firebase init
               var config = {
@@ -25,6 +25,7 @@ $( document ).ready(function() {
             var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
             var character;
             var charID;
+            var descriptionText;
 
 
             //random background 
@@ -182,7 +183,8 @@ $( document ).ready(function() {
                      $(".comic-book-section").html(comicHeader);
                      $("#heroname").html(character);
 
-                     var descriptionText = $("<p>").addClass("desc-text");
+
+                     descriptionText = $("<p>").addClass("desc-text");
                      var comicDisplay;
 
 
@@ -207,8 +209,15 @@ $( document ).ready(function() {
                      }else {
                       descriptionText.html(search.results[0].description);//get the character description from api
                       $(".bio-description-section").html(descriptionText); //add the character description to the page
+                    responsiveVoice.speak(character, "US English Female", {rate: .95});
+                    responsiveVoice.speak(search.results[0].description, "US English Female", {rate: .95});
                     }
+
+
+
                 });//end done function
+ 
+
 
             };//end search
 
