@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
             var music = new Audio('seventh.m4a');
-            music.volume = .1;
+            music.volume = .3;
             music.play();
               //firebase init
               var config = {
@@ -97,7 +97,7 @@ $( document ).ready(function() {
                 {
                  music.pause();
                 },
-                'restart music': function()
+                'start music': function()
                 {
                  music.start();
                 }
