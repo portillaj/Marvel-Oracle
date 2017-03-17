@@ -95,7 +95,7 @@ $( document ).ready(function() {
                 },
                 'kill music': function()
                 {
-                 music.stop();
+                 music.pause();
                 }
 
              };
