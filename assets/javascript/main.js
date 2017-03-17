@@ -52,7 +52,7 @@ $( document ).ready(function() {
             if (annyang) {
               // Let's define our first command. First the text we expect, and then the function it should call
               var commands = {
-               'show nearby': function() //use show nearby speech to show map
+               'show nearby comics': function() //use show nearby speech to show map
                 { console.log("showing MAP");
                 responsiveVoice.speak("Here are some nearby comic book stores", "US English Female", {rate: .95});
 
