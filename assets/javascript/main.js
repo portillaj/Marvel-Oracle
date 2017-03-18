@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-<<<<<<< HEAD
 var music = new Audio('seventh.m4a');
 music.volume = .17;
 music.play();
