@@ -5,7 +5,14 @@
 .container-fluid {
     padding: 0;
     margin: 0;
+
 }
+
+body 
+{
+background-color: black;
+}
+
 
 .character-show {
   margin-top: 0;
@@ -24,6 +31,7 @@
   margin-top: 0;
   position: relative;
   background-attachment: fixed;
+
 }
 
 
@@ -621,7 +629,7 @@ input {
 }
 @media only screen and (max-width: 448px) {
   .spidey {
-    min-height: 550px;
+    min-height: 650px;
   }
   .logo {
     left: 74%;
