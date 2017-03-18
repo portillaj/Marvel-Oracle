@@ -299,7 +299,7 @@ function MarvelCall()
 
 
             // hide sections
-            $("#newmap").hide();
+            // $("#newmap").hide();
             $("#section2").hide();
             $("#devbios").hide();
             $("#footage").hide();
@@ -409,9 +409,8 @@ function MarvelCall()
 
              };
 
-
+          // Calls the Giphy API when called
             function giphy() {
-            // Calls the Giphy API when called
                    $("#footage").show();
                    $('body').delay(300) //wait .1 seconds
                     .animate({ 'scrollTop': $('#footage').offset().top
