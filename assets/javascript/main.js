@@ -75,6 +75,10 @@ var commands = {
     console.log("Searching... " + tag);
     $("#searchbox").attr("placeholder", tag);
   $("#section2").show();
+  $("#newmap").hide();
+$("#devbios").hide();
+$("#footage").hide();
+
     character = tag;
     scrolling();
     CharHunt();
@@ -83,6 +87,10 @@ var commands = {
     console.log("Searching... " + tag);
     $("#searchbox").attr("placeholder", tag);
       $("#section2").show();
+      $("#newmap").hide();
+      $("#devbios").hide();
+      $("#footage").hide();
+
     character = tag;
     scrolling();
     CharHunt();
@@ -91,6 +99,10 @@ var commands = {
     console.log("Searching... " + tag);
     $("#searchbox").attr("placeholder", tag);
       $("#section2").show();
+      $("#newmap").hide();
+      $("#devbios").hide();
+      $("#footage").hide();
+
     character = tag;
     scrolling();
     CharHunt();
@@ -99,6 +111,10 @@ var commands = {
     console.log("Searching... " + tag);
     $("#searchbox").attr("placeholder", tag);
       $("#section2").show();
+      $("#newmap").hide();
+      $("#devbios").hide();
+      $("#footage").hide();
+
     character = tag;
     scrolling();
     CharHunt();
@@ -106,6 +122,10 @@ var commands = {
    'lets see *tag': function(tag) { //use lets see keyword + character
     console.log("Searching... " + tag);
       $("#section2").show();
+      $("#newmap").hide();
+      $("#devbios").hide();
+      $("#footage").hide();
+
     $("#searchbox").attr("placeholder", tag);
     character = tag;
     scrolling();
@@ -115,10 +135,13 @@ var commands = {
   'kill music': function() {
      music.pause();
   },
+    'stop music': function() {
+     music.pause();
+  },
   'start music': function() {
     music.play();
   },
-  'softer music': function() {
+  'lower volume': function() {
     music.volume = .1;
   },
   'crank the music': function() {
