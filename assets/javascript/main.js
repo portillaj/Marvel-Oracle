@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 var music = new Audio('seventh.m4a');
-music.volume = .12;
+music.volume = .075;
 music.play();
   //firebase init
   var config = {
@@ -76,8 +76,8 @@ var commands = {
     $("#searchbox").attr("placeholder", tag);
   $("#section2").show();
   $("#newmap").hide();
-$("#devbios").hide();
-$("#footage").hide();
+  $("#devbios").hide();
+  $("#footage").hide();
 
     character = tag;
     scrolling();
