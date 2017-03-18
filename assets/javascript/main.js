@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
 var music = new Audio('seventh.m4a');
+var avengemusic = new Audio('avengers.mp4');
 music.volume = .075;
 music.play();
 
@@ -138,10 +139,18 @@ var commands = {
     'stop music': function() {
     musicstop();
   },
+   'play avengers theme': function() {
+    console.log("avengers go")
+      musicstop();
+      avengemusic.play();
+      avengemusic.volume = .75;
+  },
     'start music': function() {
     music.play();
+      console.log("START MUSIC");
   },
     'lower volume': function() {
+        console.log("LOWER MUSIC");
    music.volume = (music.volume - .5);
   },
     'crank music': function() {
@@ -162,6 +171,8 @@ function musicstop()
 function giphy() {
 // Calls the Giphy API when called
    $("#footage").show();
+   responsiveVoice.speak("Here's footage of " + character + " in action.", "US English Female", {rate: .95});
+
    $('body').delay(300) //wait .1 seconds
     .animate({ 'scrollTop': $('#footage').offset().top
     }, 1000); 
