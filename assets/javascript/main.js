@@ -74,10 +74,10 @@ var commands = {
   'search *tag': function(tag) { //use search keyword + character
     console.log("Searching... " + tag);
     $("#searchbox").attr("placeholder", tag);
-  $("#section2").show();
-  $("#newmap").hide();
-  $("#devbios").hide();
-  $("#footage").hide();
+    $("#section2").show();
+    $("#newmap").hide();
+    $("#devbios").hide();
+    $("#footage").hide();
 
     character = tag;
     scrolling();
@@ -85,7 +85,7 @@ var commands = {
   },
    'show me *tag': function(tag) { //use show me keyword + character
     console.log("Searching... " + tag);
-    $("#searchbox").attr("placeholder", tag);
+      $("#searchbox").attr("placeholder", tag);
       $("#section2").show();
       $("#newmap").hide();
       $("#devbios").hide();
@@ -97,7 +97,7 @@ var commands = {
   },
      'bring up *tag': function(tag) { //use show me keyword + character
     console.log("Searching... " + tag);
-    $("#searchbox").attr("placeholder", tag);
+      $("#searchbox").attr("placeholder", tag);
       $("#section2").show();
       $("#newmap").hide();
       $("#devbios").hide();
@@ -132,16 +132,19 @@ var commands = {
     CharHunt();
   },
   'kill music': function() {
+    console.log("KILLING MUSIC");
      music.pause();
   },
     'stop music': function() {
+    console.log("KILLING MUSIC");
      music.pause();
   },
   'start music': function() {
     music.play();
   },
   'lower volume': function() {
-    music.volume = .1;
+        console.log("LOWER MUSIC");
+    music.volume = .05;
   },
   'crank the music': function() {
     music.volume = .95;
