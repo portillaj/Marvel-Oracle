@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 var music = new Audio('seventh.m4a');
 music.volume = .075;
-// music.play();
+music.play();
   //firebase init
   var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
@@ -133,11 +133,11 @@ var commands = {
   },
   'kill music': function() {
     console.log("KILLING MUSIC");
-     music.pause();
+    musicstop();
   },
     'stop music': function() {
     console.log("KILLING MUSIC");
-     music.pause();
+     musicstop();
   },
   'start music': function() {
     music.play();
@@ -152,8 +152,12 @@ var commands = {
   'show footage': function() {
     giphy();
   }
-
 };//end annyang
+
+function musicstop()
+{
+  music.pause();
+}
 
 //function that calls the giphy api to display gifs of the characters you asked for
 function giphy() {
