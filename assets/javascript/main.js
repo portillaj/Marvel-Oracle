@@ -141,6 +141,7 @@ var commands = {
     'stop music': function() {
      musicstop();
      avengemusic.pause();
+           capn.pause();
   },
    'play avengers theme': function() {
       console.log("avengers go")
