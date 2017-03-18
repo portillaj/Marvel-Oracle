@@ -156,6 +156,13 @@ var commands = {
     'crank music': function() {
    music.volume = 1;
   },
+    'shut up': function() {
+  responsiveVoice.cancel();
+  musicstop();
+  },
+
+
+
   'show footage': function() {
     giphy();
   }
