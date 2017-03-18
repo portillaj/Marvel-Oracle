@@ -148,8 +148,8 @@ var commands = {
       avengemusic.play();
       avengemusic.volume = .55;
   },
-     'play captain america theme': function() {
-      console.log("avengers go")
+     'play captain america': function() {
+      console.log("capn go")
       musicstop();
       avengemusic.pause();
       capn.play();
