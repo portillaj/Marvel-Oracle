@@ -79,6 +79,22 @@ var commands = {
     scrolling();
     CharHunt();
   },
+   'show me *tag': function(tag) { //use show me keyword + character
+    console.log("Searching... " + tag);
+    $("#searchbox").attr("placeholder", tag);
+      $("#section2").show();
+    character = tag;
+    scrolling();
+    CharHunt();
+  },
+     'bring up *tag': function(tag) { //use show me keyword + character
+    console.log("Searching... " + tag);
+    $("#searchbox").attr("placeholder", tag);
+      $("#section2").show();
+    character = tag;
+    scrolling();
+    CharHunt();
+  },
    'look up *tag': function(tag) { //use show me keyword + character
     console.log("Searching... " + tag);
     $("#searchbox").attr("placeholder", tag);
