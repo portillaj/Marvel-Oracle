@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
 var music = new Audio('seventh.m4a');
+var capn = new Audio('capn.m4a');
 var avengemusic = new Audio('avengers.mp4');
 music.volume = .075;
 music.play();
@@ -134,24 +135,33 @@ var commands = {
     CharHunt();
   },
   'kill music': function() {
-    musicstop();
+     musicstop();
+     avengemusic.pause();
   },
     'stop music': function() {
-    musicstop();
+     musicstop();
+     avengemusic.pause();
   },
    'play avengers theme': function() {
-    console.log("avengers go")
+      console.log("avengers go")
       musicstop();
       avengemusic.play();
-      avengemusic.volume = .75;
+      avengemusic.volume = .55;
+  },
+     'play captain america theme': function() {
+      console.log("avengers go")
+      musicstop();
+      avengemusic.pause();
+      capn.play();
+      capn.volume = .55;
   },
     'start music': function() {
-    music.play();
+      music.play();
       console.log("START MUSIC");
   },
     'lower volume': function() {
-        console.log("LOWER MUSIC");
-   music.volume = (music.volume - .5);
+     console.log("LOWER MUSIC");
+     music.volume = (music.volume - .5);
   },
     'crank music': function() {
    music.volume = 1;
