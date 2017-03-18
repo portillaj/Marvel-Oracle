@@ -26,20 +26,45 @@
   background-attachment: fixed;
 }
 
-.footage
-{
- background-color: #c93a3a;
-   font-family: 'Architects Daughter', cursive;
-  color: blue;
+
+
+.footage {
+  background-image: url('../images/character-background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  position: relative;
+  background-attachment: fixed;
+  height:;
+  background-color: #c93a3a;
+  font-family: 'Architects Daughter', cursive;
   font-size: 55px;
 }
+
+.gif-section {
+  height: 720px;
+  margin-left: 35px;
+}
+
+.gif img 
+{
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
 .gallery-title
 {
   font-family: 'Architects Daughter', cursive;
-  color: black;
-  font-size: 25px;
-   background-color: #c93a3a;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  margin-right: 35px;
+  background-color: #c93a3a;
 }
+
 
 .search-bar {
     position: absolute;
@@ -514,15 +539,6 @@ input {
 
 }
 
-
-.gif img 
-{
-
-    max-width: 100%;
-    height: 200px;
-    object-fit: contain;
-    overflow: hidden;
-}
 
 @media only screen and (max-width: 564px) {
   .spidey {
