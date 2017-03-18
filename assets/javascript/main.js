@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 var music = new Audio('seventh.m4a');
 music.volume = .075;
-music.play();
+// music.play();
   //firebase init
   var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
@@ -137,7 +137,7 @@ var commands = {
   },
     'stop music': function() {
     console.log("KILLING MUSIC");
-     music.stop();
+     music.pause();
   },
   'start music': function() {
     music.play();
