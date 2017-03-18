@@ -157,12 +157,15 @@ var commands = {
    music.volume = 1;
   },
     'shut up': function() {
+      console.log("Shutting up")
   responsiveVoice.cancel();
   musicstop();
   },
-
-
-
+    'silence': function() {
+      console.log("Shutting up")
+  responsiveVoice.cancel();
+  musicstop();
+  },
   'show footage': function() {
     giphy();
   }
