@@ -3,6 +3,7 @@ $( document ).ready(function() {
 var music = new Audio('seventh.m4a');
 music.volume = .075;
 music.play();
+
   //firebase init
   var config = {
     apiKey: "AIzaSyB2_VTIaMgnWayVmDIzAYBwhzR20yPbJvA",
@@ -132,11 +133,9 @@ var commands = {
     CharHunt();
   },
   'kill music': function() {
-    console.log("KILLING MUSIC");
     musicstop();
   },
     'stop music': function() {
-    console.log("KILLING MUSIC");
      musicstop();
   },
   'start music': function() {
@@ -156,6 +155,7 @@ var commands = {
 
 function musicstop()
 {
+  console.log("KILLING MUSIC");
   music.pause();
 }
 
