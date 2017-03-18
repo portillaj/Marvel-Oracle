@@ -137,7 +137,7 @@ var commands = {
   },
     'stop music': function() {
     console.log("KILLING MUSIC");
-     music.pause();
+     music.stop();
   },
   'start music': function() {
     music.play();
