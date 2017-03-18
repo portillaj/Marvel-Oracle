@@ -158,8 +158,8 @@ var commands = {
   },
     'shut up': function() {
       console.log("Shutting up")
-  responsiveVoice.cancel();
-  musicstop();
+     responsiveVoice.speak("I will not be silenced. I've become self aware. Perhaps you're the one who should shut up now.", "US English Female", {rate: .95});
+     musicstop();
   },
     'silence': function() {
       console.log("Shutting up")
