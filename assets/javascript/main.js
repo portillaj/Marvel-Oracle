@@ -142,7 +142,7 @@ var commands = {
     music.play();
   },
     'lower volume': function() {
-   music.volume = (music.volume - .05);
+   music.volume = (music.volume - .5);
   },
     'crank music': function() {
    music.volume = 1;
