@@ -50,14 +50,14 @@ $("#footage").hide();
 if (annyang) {
 // Let's define our first command. First the text we expect, and then the function it should call
 var commands = {
- 'show nearby': function() //use show nearby speech to show map
+ 'show nearby comics': function() //use show nearby speech to show map
   { console.log("showing MAP");
   responsiveVoice.speak("Here are some nearby comic book stores", "US English Female", {rate: .95});
 
   // initMap();
   $("#newmap").show();//when called, scroll to the map section
   $('body').delay(300) //wait .1 seconds
-      .animate({ 'scrollTop': $('#map').offset().top
+      .animate({ 'scrollTop': $('#newmap').offset().top
       }, 1000); //animate over 800ms, change this to however long you want it to anim
 
 },
