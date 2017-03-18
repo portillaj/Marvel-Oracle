@@ -135,6 +135,18 @@ var commands = {
   'kill music': function() {
     musicstop();
   },
+    'stop music': function() {
+    musicstop();
+  },
+    'start music': function() {
+    music.play();
+  },
+    'lower volume': function() {
+   music.volume = (music.volume - .05);
+  },
+    'crank music': function() {
+   music.volume = 1;
+  },
   'show footage': function() {
     giphy();
   }
