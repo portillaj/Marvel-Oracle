@@ -236,7 +236,7 @@ input {
   transition-duration: 0.4s; 
 }
 
-#map{
+#mymap{
   height: 800px;
   width: 100%;
  
