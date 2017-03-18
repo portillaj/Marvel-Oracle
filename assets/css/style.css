@@ -26,8 +26,11 @@
   background-attachment: fixed;
 }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f0ae2daf7755fb5878418832748407ab21d0ed7b
 .footage {
   background-image: url('../images/character-background2.jpg');
   background-size: cover;
@@ -67,10 +70,10 @@
 
 
 .search-bar {
-    position: absolute;
-    left: 45%;
-    top: 63%;
-    width: 400px;
+  position: absolute;
+  left: 45%;
+  top: 63%;
+  width: 400px;
   margin-right: -400px;
   margin-left: -137px;
 }
@@ -83,16 +86,6 @@
 
 .header {
     position: relative;
-}
-
-.mic {
-  position: absolute;
-  top: 45%;
-  left: 53%;
-  width: 100px;
-  height: 100px;
-  margin-right: -100px;
-  margin-left: -100px;
 }
 
 .spidey {
@@ -539,7 +532,10 @@ input {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f0ae2daf7755fb5878418832748407ab21d0ed7b
 @media only screen and (max-width: 564px) {
   .spidey {
     height: 550px;
