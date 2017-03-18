@@ -165,6 +165,7 @@ function musicstop()
 {
   console.log("KILLING MUSIC");
   music.pause();
+  avengemusic.pause();
 }
 
 //function that calls the giphy api to display gifs of the characters you asked for
