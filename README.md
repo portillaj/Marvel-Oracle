@@ -22,14 +22,14 @@ Lists of commands to use with microphone
     - crank music
    
    - Annyang voice
-    - shut up (resonds with a comeback)
-    - silence (voice silences)
+      - shut up (resonds with a comeback)
+      - silence (voice silences)
     
    -giphy footage command
       - show footage (shows footage of current character)
       
  - show comic book stores command
-  - show nearby comics (google maps shows nearby comic book stores)
+    - show nearby comics (google maps shows nearby comic book stores)
   
   - development team command
     - who made this (shows the development team who made the app)
