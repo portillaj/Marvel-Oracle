@@ -25,7 +25,7 @@ Lists of commands to use with microphone
       - shut up (resonds with a comeback)
       - silence (voice silences)
     
-   -giphy footage command
+    - giphy footage command
       - show footage (shows footage of current character)
       
  - show comic book stores command
